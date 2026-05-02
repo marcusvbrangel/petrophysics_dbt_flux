@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "dev"."main"."cliente" ("cliente_id" integer,"Nome Cliente" text,"E-mail" text,"Dt Cadastro" text,"Status Cliente" text,"Segmento" text,"Canal Preferido" text,"Score Fidelidade" integer)
+  ;
+    -- dbt seed --
+    
+          COPY "dev"."main"."cliente" FROM '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/seeds/cliente.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

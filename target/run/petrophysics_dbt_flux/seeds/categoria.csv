@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "dev"."main"."categoria" ("categoria_id" integer,"sigla" text,"Nome Categoria" text)
+  ;
+    -- dbt seed --
+    
+          COPY "dev"."main"."categoria" FROM '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/seeds/categoria.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

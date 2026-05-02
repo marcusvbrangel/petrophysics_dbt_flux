@@ -1,0 +1,86 @@
+[0m18:32:05.113616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x728e55c1abd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x728e58babe10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x728e58baa490>]}
+
+
+============================== 18:32:05.117732 | 633df4c1-f9e0-49db-88ce-a44cf77cb234 ==============================
+[0m18:32:05.117732 [info ] [MainThread]: Running with dbt=1.11.8
+[0m18:32:05.118616 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'quiet': 'False', 'invocation_command': 'dbt init', 'log_format': 'default', 'partial_parse': 'True', 'empty': 'None', 'log_path': 'logs', 'profiles_dir': '/home/wolf/.dbt', 'static_parser': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'introspect': 'True', 'printer_width': '80', 'no_print': 'None', 'indirect_selection': 'eager', 'log_cache_events': 'False'}
+[0m18:32:15.331715 [error] [MainThread]: Encountered an error:
+
+[0m18:32:15.345384 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/wolf/.pyenv/versions/3.11.11/envs/petrophysics_dbt_flux/lib/python3.11/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/.pyenv/versions/3.11.11/envs/petrophysics_dbt_flux/lib/python3.11/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/.pyenv/versions/3.11.11/envs/petrophysics_dbt_flux/lib/python3.11/site-packages/dbt/cli/main.py", line 488, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/wolf/.pyenv/versions/3.11.11/envs/petrophysics_dbt_flux/lib/python3.11/site-packages/dbt/task/init.py", line 324, in run
+    project_name = self.get_valid_project_name()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/.pyenv/versions/3.11.11/envs/petrophysics_dbt_flux/lib/python3.11/site-packages/dbt/task/init.py", line 278, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/.pyenv/versions/3.11.11/envs/petrophysics_dbt_flux/lib/python3.11/site-packages/click/termui.py", line 179, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/wolf/.pyenv/versions/3.11.11/envs/petrophysics_dbt_flux/lib/python3.11/site-packages/click/termui.py", line 162, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m18:32:15.354529 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 10.318335, "process_in_blocks": "0", "process_kernel_time": 0.208117, "process_mem_max_rss": "106368", "process_out_blocks": "8", "process_user_time": 1.969113}
+[0m18:32:15.360189 [debug] [MainThread]: Command `dbt init` failed at 18:32:15.359106 after 10.33 seconds
+[0m18:32:15.363506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x728e5a27b1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x728e55a81fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x728e55c130d0>]}
+[0m18:32:15.367210 [debug] [MainThread]: Flushing usage events
+[0m18:32:16.413413 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:32:42.780356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7693ac618290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7693ac60bcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7693ac29edd0>]}
+
+
+============================== 18:32:42.784364 | a553a93e-b99e-4cdf-9d8e-7edb6d8614c1 ==============================
+[0m18:32:42.784364 [info ] [MainThread]: Running with dbt=1.11.8
+[0m18:32:42.785205 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'partial_parse': 'True', 'write_json': 'True', 'static_parser': 'True', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'empty': 'None', 'invocation_command': 'dbt init petrophysics_dbt_flux', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'quiet': 'False', 'use_experimental_parser': 'False', 'profiles_dir': '/home/wolf/.dbt', 'no_print': 'None', 'warn_error': 'None', 'target_path': 'None', 'use_colors': 'True', 'version_check': 'True', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'fail_fast': 'False', 'log_path': 'logs'}
+[0m18:32:42.797345 [debug] [MainThread]: Starter project path: /home/wolf/.pyenv/versions/3.11.11/envs/petrophysics_dbt_flux/lib/python3.11/site-packages/dbt/include/starter_project
+[0m18:32:42.800748 [info ] [MainThread]: 
+Your new dbt project "petrophysics_dbt_flux" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:32:42.801403 [info ] [MainThread]: Setting up your profile.
+[0m18:33:17.123865 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 34.422703, "process_in_blocks": "0", "process_kernel_time": 0.214744, "process_mem_max_rss": "137316", "process_out_blocks": "80", "process_user_time": 2.14645}
+[0m18:33:17.124691 [debug] [MainThread]: Command `dbt init` succeeded at 18:33:17.124519 after 34.42 seconds
+[0m18:33:17.125268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7693b0b7b150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7693b0fbcdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7693ac618090>]}
+[0m18:33:17.125878 [debug] [MainThread]: Flushing usage events
+[0m18:33:17.878096 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:36:57.569538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x716b6a2a09d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x716b675beb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x716b6a2a1610>]}
+
+
+============================== 18:36:57.573590 | c1408af0-f4cb-4eaa-9b7e-0b0bf2964e49 ==============================
+[0m18:36:57.573590 [info ] [MainThread]: Running with dbt=1.11.8
+[0m18:36:57.574513 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'debug': 'False', 'quiet': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'static_parser': 'True', 'log_path': 'logs', 'partial_parse': 'True', 'printer_width': '80', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/home/wolf/.dbt', 'invocation_command': 'dbt debug', 'write_json': 'True', 'indirect_selection': 'eager', 'empty': 'None', 'log_format': 'default', 'use_colors': 'True', 'warn_error': 'None', 'target_path': 'None'}
+[0m18:36:57.586042 [info ] [MainThread]: dbt version: 1.11.8
+[0m18:36:57.586730 [info ] [MainThread]: python version: 3.11.11
+[0m18:36:57.587311 [info ] [MainThread]: python path: /home/wolf/.pyenv/versions/3.11.11/envs/petrophysics_dbt_flux/bin/python
+[0m18:36:57.587924 [info ] [MainThread]: os info: Linux-6.17.0-22-generic-x86_64-with-glibc2.39
+[0m18:36:57.735185 [info ] [MainThread]: Using profiles dir at /home/wolf/.dbt
+[0m18:36:57.735939 [info ] [MainThread]: Using profiles.yml file at /home/wolf/.dbt/profiles.yml
+[0m18:36:57.736740 [info ] [MainThread]: Using dbt_project.yml file at /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/dbt_project.yml
+[0m18:36:57.737709 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m18:36:57.740398 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.2495237, "process_in_blocks": "0", "process_kernel_time": 0.19702, "process_mem_max_rss": "138604", "process_out_blocks": "16", "process_user_time": 2.10222}
+[0m18:36:57.741459 [debug] [MainThread]: Command `dbt debug` failed at 18:36:57.741172 after 0.25 seconds
+[0m18:36:57.742113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x716b6a2a3310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x716b6a2a09d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x716b670bb8d0>]}
+[0m18:36:57.742964 [debug] [MainThread]: Flushing usage events
+[0m18:36:58.442805 [debug] [MainThread]: An error was encountered while trying to flush usage events

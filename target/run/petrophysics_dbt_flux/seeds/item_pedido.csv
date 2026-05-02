@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "dev"."main"."item_pedido" ("pedido_id" integer,"item_seq" integer,"codigo_produto" integer,"Qtde" integer,"Preco Unit." float8,"Desc Item" float8,"Subtotal Item" float8)
+  ;
+    -- dbt seed --
+    
+          COPY "dev"."main"."item_pedido" FROM '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/seeds/item_pedido.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

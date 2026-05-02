@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "dev"."main"."endereco" ("endereco_id" integer,"cliente_id" integer,"UF" text,"Nome Cidade" text,"CEP" text,"Logradouro" text,"bairro" text,"numero" integer,"complemento" text)
+  ;
+    -- dbt seed --
+    
+          COPY "dev"."main"."endereco" FROM '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/seeds/endereco.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

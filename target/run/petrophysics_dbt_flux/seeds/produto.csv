@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "dev"."main"."produto" ("produto_id" integer,"Nome Produto" text,"ativo?" text,"Qtd Estoque" integer,"Preco Atual" float8,"categoria_id" integer,"Marca" text,"Dt Cadastro" text)
+  ;
+    -- dbt seed --
+    
+          COPY "dev"."main"."produto" FROM '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/seeds/produto.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

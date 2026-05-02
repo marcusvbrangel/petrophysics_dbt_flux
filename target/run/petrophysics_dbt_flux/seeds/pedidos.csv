@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "dev"."main"."pedidos" ("pedido_id" integer,"cliente_id" integer,"DtPedido" text,"Status Pedido" text,"Forma Pgto" text,"vl_frete" float8,"vl_desconto_pedido" integer,"cupom_codigo" text,"Canal Venda" text,"uf_entrega" text,"CidadeEntrega" text)
+  ;
+    -- dbt seed --
+    
+          COPY "dev"."main"."pedidos" FROM '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/seeds/pedidos.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

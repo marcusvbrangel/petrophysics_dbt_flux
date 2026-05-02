@@ -1,0 +1,410 @@
+[0m18:39:29.683257 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75cd32e5a150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75cd32e5ac50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75cd32e5ad90>]}
+
+
+============================== 18:39:29.690582 | cbed9063-d470-4abf-b624-715af7078a21 ==============================
+[0m18:39:29.690582 [info ] [MainThread]: Running with dbt=1.11.8
+[0m18:39:29.692759 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'warn_error': 'None', 'profiles_dir': '/home/wolf/.dbt', 'printer_width': '80', 'fail_fast': 'False', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'log_cache_events': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'indirect_selection': 'eager', 'no_print': 'None', 'cache_selected_only': 'False', 'log_path': 'petrophysics_dbt_flux/logs', 'version_check': 'True', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug --project-dir petrophysics_dbt_flux --profiles-dir /home/wolf/.dbt', 'write_json': 'True', 'partial_parse': 'True', 'debug': 'False'}
+[0m18:39:29.714378 [info ] [MainThread]: dbt version: 1.11.8
+[0m18:39:29.715323 [info ] [MainThread]: python version: 3.11.11
+[0m18:39:29.716113 [info ] [MainThread]: python path: /home/wolf/.pyenv/versions/3.11.11/envs/petrophysics_dbt_flux/bin/python
+[0m18:39:29.716952 [info ] [MainThread]: os info: Linux-6.17.0-22-generic-x86_64-with-glibc2.39
+[0m18:39:29.938151 [info ] [MainThread]: Using profiles dir at /home/wolf/.dbt
+[0m18:39:29.938952 [info ] [MainThread]: Using profiles.yml file at /home/wolf/.dbt/profiles.yml
+[0m18:39:29.940062 [info ] [MainThread]: Using dbt_project.yml file at petrophysics_dbt_flux/dbt_project.yml
+[0m18:39:29.943219 [info ] [MainThread]: adapter type: duckdb
+[0m18:39:29.944460 [info ] [MainThread]: adapter version: 1.10.1
+[0m18:39:30.193130 [info ] [MainThread]: Configuration:
+[0m18:39:30.194132 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:39:30.195337 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m18:39:30.196587 [info ] [MainThread]: Required dependencies:
+[0m18:39:30.197815 [debug] [MainThread]: Executing "git --help"
+[0m18:39:30.202426 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:39:30.203280 [debug] [MainThread]: STDERR: "b''"
+[0m18:39:30.203986 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:39:30.204691 [info ] [MainThread]: Connection:
+[0m18:39:30.205616 [info ] [MainThread]:   database: dev
+[0m18:39:30.206370 [info ] [MainThread]:   schema: main
+[0m18:39:30.207117 [info ] [MainThread]:   path: dev.duckdb
+[0m18:39:30.208292 [info ] [MainThread]:   config_options: None
+[0m18:39:30.209855 [info ] [MainThread]:   extensions: None
+[0m18:39:30.211060 [info ] [MainThread]:   settings: {}
+[0m18:39:30.211969 [info ] [MainThread]:   external_root: .
+[0m18:39:30.212775 [info ] [MainThread]:   use_credential_provider: None
+[0m18:39:30.213619 [info ] [MainThread]:   attach: None
+[0m18:39:30.214455 [info ] [MainThread]:   filesystems: None
+[0m18:39:30.215294 [info ] [MainThread]:   remote: None
+[0m18:39:30.216296 [info ] [MainThread]:   plugins: None
+[0m18:39:30.217045 [info ] [MainThread]:   disable_transactions: False
+[0m18:39:30.218197 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m18:39:30.402092 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m18:39:30.443582 [debug] [MainThread]: Using duckdb connection "debug"
+[0m18:39:30.444893 [debug] [MainThread]: On debug: select 1 as id
+[0m18:39:30.445965 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:39:30.464756 [debug] [MainThread]: SQL status: OK in 0.019 seconds
+[0m18:39:30.466201 [debug] [MainThread]: On debug: Close
+[0m18:39:30.466907 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m18:39:30.467642 [info ] [MainThread]: [32mAll checks passed![0m
+[0m18:39:30.469291 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.92108786, "process_in_blocks": "0", "process_kernel_time": 0.260358, "process_mem_max_rss": "149140", "process_out_blocks": "40", "process_user_time": 3.492393}
+[0m18:39:30.470119 [debug] [MainThread]: Command `dbt debug` succeeded at 18:39:30.469966 after 0.92 seconds
+[0m18:39:30.470784 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m18:39:30.471489 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75cd32e4f8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75cd32b89750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75cd32cb5cd0>]}
+[0m18:39:30.472270 [debug] [MainThread]: Flushing usage events
+[0m18:39:30.476853 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:47:20.137749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701d16a4c490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701d16a4ce10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701d16a4c1d0>]}
+
+
+============================== 18:47:20.141761 | bddb6d7d-a264-4ce1-b654-b5e123dec0da ==============================
+[0m18:47:20.141761 [info ] [MainThread]: Running with dbt=1.11.8
+[0m18:47:20.142759 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'empty': 'None', 'static_parser': 'True', 'cache_selected_only': 'False', 'introspect': 'True', 'printer_width': '80', 'invocation_command': 'dbt debug', 'log_format': 'default', 'fail_fast': 'False', 'target_path': 'None', 'use_experimental_parser': 'False', 'no_print': 'None', 'partial_parse': 'True', 'log_path': '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'profiles_dir': '/home/wolf/.dbt', 'warn_error': 'None', 'quiet': 'False', 'write_json': 'True', 'indirect_selection': 'eager', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True'}
+[0m18:47:20.155865 [info ] [MainThread]: dbt version: 1.11.8
+[0m18:47:20.156605 [info ] [MainThread]: python version: 3.11.11
+[0m18:47:20.157125 [info ] [MainThread]: python path: /home/wolf/.pyenv/versions/3.11.11/envs/petrophysics_dbt_flux/bin/python
+[0m18:47:20.157626 [info ] [MainThread]: os info: Linux-6.17.0-22-generic-x86_64-with-glibc2.39
+[0m18:47:20.310820 [info ] [MainThread]: Using profiles dir at /home/wolf/.dbt
+[0m18:47:20.311504 [info ] [MainThread]: Using profiles.yml file at /home/wolf/.dbt/profiles.yml
+[0m18:47:20.312162 [info ] [MainThread]: Using dbt_project.yml file at /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/dbt_project.yml
+[0m18:47:20.314391 [info ] [MainThread]: adapter type: duckdb
+[0m18:47:20.315488 [info ] [MainThread]: adapter version: 1.10.1
+[0m18:47:20.468201 [info ] [MainThread]: Configuration:
+[0m18:47:20.468846 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:47:20.469531 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m18:47:20.470183 [info ] [MainThread]: Required dependencies:
+[0m18:47:20.470825 [debug] [MainThread]: Executing "git --help"
+[0m18:47:20.474742 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:47:20.475675 [debug] [MainThread]: STDERR: "b''"
+[0m18:47:20.476286 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:47:20.477022 [info ] [MainThread]: Connection:
+[0m18:47:20.477803 [info ] [MainThread]:   database: dev
+[0m18:47:20.478527 [info ] [MainThread]:   schema: main
+[0m18:47:20.479049 [info ] [MainThread]:   path: dev.duckdb
+[0m18:47:20.479793 [info ] [MainThread]:   config_options: None
+[0m18:47:20.480621 [info ] [MainThread]:   extensions: None
+[0m18:47:20.481592 [info ] [MainThread]:   settings: {}
+[0m18:47:20.482067 [info ] [MainThread]:   external_root: .
+[0m18:47:20.482753 [info ] [MainThread]:   use_credential_provider: None
+[0m18:47:20.483249 [info ] [MainThread]:   attach: None
+[0m18:47:20.483744 [info ] [MainThread]:   filesystems: None
+[0m18:47:20.484213 [info ] [MainThread]:   remote: None
+[0m18:47:20.484695 [info ] [MainThread]:   plugins: None
+[0m18:47:20.485163 [info ] [MainThread]:   disable_transactions: False
+[0m18:47:20.485804 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m18:47:20.611905 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m18:47:20.645819 [debug] [MainThread]: Using duckdb connection "debug"
+[0m18:47:20.646373 [debug] [MainThread]: On debug: select 1 as id
+[0m18:47:20.646885 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:47:20.661602 [debug] [MainThread]: SQL status: OK in 0.015 seconds
+[0m18:47:20.663042 [debug] [MainThread]: On debug: Close
+[0m18:47:20.663601 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m18:47:20.664115 [info ] [MainThread]: [32mAll checks passed![0m
+[0m18:47:20.665423 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.6072109, "process_in_blocks": "0", "process_kernel_time": 0.260567, "process_mem_max_rss": "149516", "process_out_blocks": "24", "process_user_time": 2.435954}
+[0m18:47:20.666776 [debug] [MainThread]: Command `dbt debug` succeeded at 18:47:20.666481 after 0.61 seconds
+[0m18:47:20.667751 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m18:47:20.668892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701d1b07b1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701d16777010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x701d168af8d0>]}
+[0m18:47:20.669908 [debug] [MainThread]: Flushing usage events
+[0m18:47:21.564494 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:44:00.321094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e755cf5c690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e755cf5cf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e755cf5cfd0>]}
+
+
+============================== 19:44:00.324363 | 4d10afd6-18b7-48bd-a944-f8b195e4acb4 ==============================
+[0m19:44:00.324363 [info ] [MainThread]: Running with dbt=1.11.8
+[0m19:44:00.325148 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'fail_fast': 'False', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'debug': 'False', 'version_check': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'static_parser': 'True', 'cache_selected_only': 'False', 'empty': 'None', 'write_json': 'True', 'invocation_command': 'dbt seed', 'target_path': 'None', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'profiles_dir': '/home/wolf/.dbt', 'log_path': '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/logs', 'partial_parse': 'True', 'use_colors': 'True'}
+[0m19:44:00.576773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4d10afd6-18b7-48bd-a944-f8b195e4acb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e755cf587d0>]}
+[0m19:44:00.652272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4d10afd6-18b7-48bd-a944-f8b195e4acb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e755ff78f90>]}
+[0m19:44:00.655036 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m19:44:00.782840 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m19:44:00.783716 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:44:00.784217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4d10afd6-18b7-48bd-a944-f8b195e4acb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e755cf53650>]}
+[0m19:44:02.468290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4d10afd6-18b7-48bd-a944-f8b195e4acb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7556e283d0>]}
+[0m19:44:02.589240 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m19:44:02.591187 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m19:44:02.599503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4d10afd6-18b7-48bd-a944-f8b195e4acb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7556e44150>]}
+[0m19:44:02.600140 [info ] [MainThread]: Found 2 models, 6 seeds, 4 data tests, 475 macros
+[0m19:44:02.600615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4d10afd6-18b7-48bd-a944-f8b195e4acb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7556273d90>]}
+[0m19:44:02.604089 [info ] [MainThread]: 
+[0m19:44:02.604728 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:44:02.605140 [info ] [MainThread]: 
+[0m19:44:02.605727 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m19:44:02.611858 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m19:44:02.714967 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m19:44:02.715576 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m19:44:02.716083 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:44:02.732767 [debug] [ThreadPool]: SQL status: OK in 0.017 seconds
+[0m19:44:02.734534 [debug] [ThreadPool]: On list_dev: Close
+[0m19:44:02.735521 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m19:44:02.736162 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m19:44:02.745726 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m19:44:02.746213 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m19:44:02.746745 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:44:02.747964 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:44:02.749523 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m19:44:02.749956 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m19:44:02.750713 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:44:02.751133 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m19:44:02.751535 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m19:44:02.752219 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:44:02.753219 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m19:44:02.753651 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m19:44:02.754028 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m19:44:02.754756 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:44:02.755173 [debug] [ThreadPool]: On create_dev_main: Close
+[0m19:44:02.757026 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dev_main, now list_dev_main)
+[0m19:44:02.763388 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m19:44:02.763872 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m19:44:02.764275 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:44:02.765194 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:44:02.765649 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m19:44:02.766075 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m19:44:02.769339 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m19:44:02.770830 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m19:44:02.771680 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m19:44:02.772075 [debug] [ThreadPool]: On list_dev_main: Close
+[0m19:44:02.772902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4d10afd6-18b7-48bd-a944-f8b195e4acb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e75555f0990>]}
+[0m19:44:02.773597 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:44:02.774013 [debug] [MainThread]: On master: BEGIN
+[0m19:44:02.774429 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:44:02.775201 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m19:44:02.775645 [debug] [MainThread]: On master: COMMIT
+[0m19:44:02.776055 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:44:02.776473 [debug] [MainThread]: On master: COMMIT
+[0m19:44:02.777103 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:44:02.777542 [debug] [MainThread]: On master: Close
+[0m19:44:02.779908 [debug] [Thread-1 (]: Began running node seed.petrophysics_dbt_flux.categoria
+[0m19:44:02.780621 [info ] [Thread-1 (]: 1 of 6 START seed file main.categoria .......................................... [RUN]
+[0m19:44:02.781243 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main, now seed.petrophysics_dbt_flux.categoria)
+[0m19:44:02.781877 [debug] [Thread-1 (]: Began compiling node seed.petrophysics_dbt_flux.categoria
+[0m19:44:02.782765 [debug] [Thread-1 (]: Began executing node seed.petrophysics_dbt_flux.categoria
+[0m19:44:02.814799 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.categoria"
+[0m19:44:02.815351 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.categoria: BEGIN
+[0m19:44:02.815807 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:44:02.816675 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:44:02.817143 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.categoria"
+[0m19:44:02.817598 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.categoria: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "seed.petrophysics_dbt_flux.categoria"} */
+
+    create table "dev"."main"."categoria" ("categoria_id" integer,"sigla" text,"Nome Categoria" text)
+  
+[0m19:44:02.818594 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:44:02.831154 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.categoria"
+[0m19:44:02.831715 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.categoria: 
+          COPY "dev"."main"."categoria" FROM '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/seeds/categoria.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:44:02.836850 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m19:44:02.843047 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.petrophysics_dbt_flux.categoria"
+[0m19:44:02.859941 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.categoria: COMMIT
+[0m19:44:02.860519 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.categoria"
+[0m19:44:02.860969 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.categoria: COMMIT
+[0m19:44:02.863827 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m19:44:02.865903 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.categoria: Close
+[0m19:44:02.867644 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d10afd6-18b7-48bd-a944-f8b195e4acb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7555582c10>]}
+[0m19:44:02.868267 [info ] [Thread-1 (]: 1 of 6 OK loaded seed file main.categoria ...................................... [[32mINSERT 8[0m in 0.09s]
+[0m19:44:02.869023 [debug] [Thread-1 (]: Finished running node seed.petrophysics_dbt_flux.categoria
+[0m19:44:02.869664 [debug] [Thread-1 (]: Began running node seed.petrophysics_dbt_flux.cliente
+[0m19:44:02.871085 [info ] [Thread-1 (]: 2 of 6 START seed file main.cliente ............................................ [RUN]
+[0m19:44:02.871926 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.petrophysics_dbt_flux.categoria, now seed.petrophysics_dbt_flux.cliente)
+[0m19:44:02.872477 [debug] [Thread-1 (]: Began compiling node seed.petrophysics_dbt_flux.cliente
+[0m19:44:02.873130 [debug] [Thread-1 (]: Began executing node seed.petrophysics_dbt_flux.cliente
+[0m19:44:02.878258 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.cliente"
+[0m19:44:02.878751 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.cliente: BEGIN
+[0m19:44:02.879171 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:44:02.879964 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:44:02.880411 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.cliente"
+[0m19:44:02.880864 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "seed.petrophysics_dbt_flux.cliente"} */
+
+    create table "dev"."main"."cliente" ("cliente_id" integer,"Nome Cliente" text,"E-mail" text,"Dt Cadastro" text,"Status Cliente" text,"Segmento" text,"Canal Preferido" text,"Score Fidelidade" integer)
+  
+[0m19:44:02.881758 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:44:02.883154 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.cliente"
+[0m19:44:02.883619 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.cliente: 
+          COPY "dev"."main"."cliente" FROM '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/seeds/cliente.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:44:02.887583 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:44:02.888818 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.petrophysics_dbt_flux.cliente"
+[0m19:44:02.891454 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.cliente: COMMIT
+[0m19:44:02.891948 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.cliente"
+[0m19:44:02.892374 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.cliente: COMMIT
+[0m19:44:02.895054 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m19:44:02.896003 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.cliente: Close
+[0m19:44:02.896687 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d10afd6-18b7-48bd-a944-f8b195e4acb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e75561db210>]}
+[0m19:44:02.897287 [info ] [Thread-1 (]: 2 of 6 OK loaded seed file main.cliente ........................................ [[32mINSERT 20[0m in 0.02s]
+[0m19:44:02.897992 [debug] [Thread-1 (]: Finished running node seed.petrophysics_dbt_flux.cliente
+[0m19:44:02.898524 [debug] [Thread-1 (]: Began running node seed.petrophysics_dbt_flux.endereco
+[0m19:44:02.899159 [info ] [Thread-1 (]: 3 of 6 START seed file main.endereco ........................................... [RUN]
+[0m19:44:02.899740 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.petrophysics_dbt_flux.cliente, now seed.petrophysics_dbt_flux.endereco)
+[0m19:44:02.900198 [debug] [Thread-1 (]: Began compiling node seed.petrophysics_dbt_flux.endereco
+[0m19:44:02.900669 [debug] [Thread-1 (]: Began executing node seed.petrophysics_dbt_flux.endereco
+[0m19:44:02.906930 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.endereco"
+[0m19:44:02.907895 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.endereco: BEGIN
+[0m19:44:02.908745 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:44:02.909650 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:44:02.910126 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.endereco"
+[0m19:44:02.910575 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.endereco: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "seed.petrophysics_dbt_flux.endereco"} */
+
+    create table "dev"."main"."endereco" ("endereco_id" integer,"cliente_id" integer,"UF" text,"Nome Cidade" text,"CEP" text,"Logradouro" text,"bairro" text,"numero" integer,"complemento" text)
+  
+[0m19:44:02.911563 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:44:02.912972 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.endereco"
+[0m19:44:02.913436 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.endereco: 
+          COPY "dev"."main"."endereco" FROM '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/seeds/endereco.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:44:02.917205 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:44:02.918119 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.petrophysics_dbt_flux.endereco"
+[0m19:44:02.920157 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.endereco: COMMIT
+[0m19:44:02.920627 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.endereco"
+[0m19:44:02.921051 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.endereco: COMMIT
+[0m19:44:02.923959 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m19:44:02.925022 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.endereco: Close
+[0m19:44:02.925692 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d10afd6-18b7-48bd-a944-f8b195e4acb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7556292b50>]}
+[0m19:44:02.926350 [info ] [Thread-1 (]: 3 of 6 OK loaded seed file main.endereco ....................................... [[32mINSERT 20[0m in 0.03s]
+[0m19:44:02.927068 [debug] [Thread-1 (]: Finished running node seed.petrophysics_dbt_flux.endereco
+[0m19:44:02.927761 [debug] [Thread-1 (]: Began running node seed.petrophysics_dbt_flux.item_pedido
+[0m19:44:02.929034 [info ] [Thread-1 (]: 4 of 6 START seed file main.item_pedido ........................................ [RUN]
+[0m19:44:02.930085 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.petrophysics_dbt_flux.endereco, now seed.petrophysics_dbt_flux.item_pedido)
+[0m19:44:02.931080 [debug] [Thread-1 (]: Began compiling node seed.petrophysics_dbt_flux.item_pedido
+[0m19:44:02.931735 [debug] [Thread-1 (]: Began executing node seed.petrophysics_dbt_flux.item_pedido
+[0m19:44:02.953963 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.item_pedido"
+[0m19:44:02.954595 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.item_pedido: BEGIN
+[0m19:44:02.955369 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:44:02.956798 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:44:02.957391 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.item_pedido"
+[0m19:44:02.957902 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.item_pedido: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "seed.petrophysics_dbt_flux.item_pedido"} */
+
+    create table "dev"."main"."item_pedido" ("pedido_id" integer,"item_seq" integer,"codigo_produto" integer,"Qtde" integer,"Preco Unit." float8,"Desc Item" float8,"Subtotal Item" float8)
+  
+[0m19:44:02.958899 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:44:02.960590 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.item_pedido"
+[0m19:44:02.961069 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.item_pedido: 
+          COPY "dev"."main"."item_pedido" FROM '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/seeds/item_pedido.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:44:02.967436 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m19:44:02.968351 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.petrophysics_dbt_flux.item_pedido"
+[0m19:44:02.970371 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.item_pedido: COMMIT
+[0m19:44:02.970844 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.item_pedido"
+[0m19:44:02.971288 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.item_pedido: COMMIT
+[0m19:44:02.974203 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m19:44:02.975173 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.item_pedido: Close
+[0m19:44:02.975847 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d10afd6-18b7-48bd-a944-f8b195e4acb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e755635f2d0>]}
+[0m19:44:02.976494 [info ] [Thread-1 (]: 4 of 6 OK loaded seed file main.item_pedido .................................... [[32mINSERT 370[0m in 0.05s]
+[0m19:44:02.977208 [debug] [Thread-1 (]: Finished running node seed.petrophysics_dbt_flux.item_pedido
+[0m19:44:02.977870 [debug] [Thread-1 (]: Began running node seed.petrophysics_dbt_flux.pedidos
+[0m19:44:02.978914 [info ] [Thread-1 (]: 5 of 6 START seed file main.pedidos ............................................ [RUN]
+[0m19:44:02.980174 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.petrophysics_dbt_flux.item_pedido, now seed.petrophysics_dbt_flux.pedidos)
+[0m19:44:02.981235 [debug] [Thread-1 (]: Began compiling node seed.petrophysics_dbt_flux.pedidos
+[0m19:44:02.981938 [debug] [Thread-1 (]: Began executing node seed.petrophysics_dbt_flux.pedidos
+[0m19:44:02.991677 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.pedidos"
+[0m19:44:02.992639 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.pedidos: BEGIN
+[0m19:44:02.993841 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:44:02.994675 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:44:02.995137 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.pedidos"
+[0m19:44:02.995600 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.pedidos: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "seed.petrophysics_dbt_flux.pedidos"} */
+
+    create table "dev"."main"."pedidos" ("pedido_id" integer,"cliente_id" integer,"DtPedido" text,"Status Pedido" text,"Forma Pgto" text,"vl_frete" float8,"vl_desconto_pedido" integer,"cupom_codigo" text,"Canal Venda" text,"uf_entrega" text,"CidadeEntrega" text)
+  
+[0m19:44:02.996544 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:44:02.997960 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.pedidos"
+[0m19:44:02.998426 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.pedidos: 
+          COPY "dev"."main"."pedidos" FROM '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/seeds/pedidos.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:44:03.003237 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m19:44:03.004157 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.petrophysics_dbt_flux.pedidos"
+[0m19:44:03.006194 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.pedidos: COMMIT
+[0m19:44:03.006683 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.pedidos"
+[0m19:44:03.007104 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.pedidos: COMMIT
+[0m19:44:03.009988 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m19:44:03.010943 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.pedidos: Close
+[0m19:44:03.011590 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d10afd6-18b7-48bd-a944-f8b195e4acb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e755633df10>]}
+[0m19:44:03.012176 [info ] [Thread-1 (]: 5 of 6 OK loaded seed file main.pedidos ........................................ [[32mINSERT 100[0m in 0.03s]
+[0m19:44:03.012890 [debug] [Thread-1 (]: Finished running node seed.petrophysics_dbt_flux.pedidos
+[0m19:44:03.013540 [debug] [Thread-1 (]: Began running node seed.petrophysics_dbt_flux.produto
+[0m19:44:03.014321 [info ] [Thread-1 (]: 6 of 6 START seed file main.produto ............................................ [RUN]
+[0m19:44:03.014951 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.petrophysics_dbt_flux.pedidos, now seed.petrophysics_dbt_flux.produto)
+[0m19:44:03.015508 [debug] [Thread-1 (]: Began compiling node seed.petrophysics_dbt_flux.produto
+[0m19:44:03.015976 [debug] [Thread-1 (]: Began executing node seed.petrophysics_dbt_flux.produto
+[0m19:44:03.020998 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.produto"
+[0m19:44:03.021523 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.produto: BEGIN
+[0m19:44:03.021996 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:44:03.023720 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:44:03.024562 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.produto"
+[0m19:44:03.025117 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.produto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "seed.petrophysics_dbt_flux.produto"} */
+
+    create table "dev"."main"."produto" ("produto_id" integer,"Nome Produto" text,"ativo?" text,"Qtd Estoque" integer,"Preco Atual" float8,"categoria_id" integer,"Marca" text,"Dt Cadastro" text)
+  
+[0m19:44:03.026233 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:44:03.027899 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.produto"
+[0m19:44:03.028495 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.produto: 
+          COPY "dev"."main"."produto" FROM '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/seeds/produto.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:44:03.032114 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:44:03.033049 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.petrophysics_dbt_flux.produto"
+[0m19:44:03.035287 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.produto: COMMIT
+[0m19:44:03.035791 [debug] [Thread-1 (]: Using duckdb connection "seed.petrophysics_dbt_flux.produto"
+[0m19:44:03.036241 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.produto: COMMIT
+[0m19:44:03.039309 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m19:44:03.041454 [debug] [Thread-1 (]: On seed.petrophysics_dbt_flux.produto: Close
+[0m19:44:03.042849 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d10afd6-18b7-48bd-a944-f8b195e4acb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e755633df10>]}
+[0m19:44:03.044211 [info ] [Thread-1 (]: 6 of 6 OK loaded seed file main.produto ........................................ [[32mINSERT 20[0m in 0.03s]
+[0m19:44:03.045593 [debug] [Thread-1 (]: Finished running node seed.petrophysics_dbt_flux.produto
+[0m19:44:03.047560 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:44:03.048125 [debug] [MainThread]: On master: BEGIN
+[0m19:44:03.048762 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:44:03.049668 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m19:44:03.050212 [debug] [MainThread]: On master: COMMIT
+[0m19:44:03.050764 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:44:03.051212 [debug] [MainThread]: On master: COMMIT
+[0m19:44:03.052144 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:44:03.052819 [debug] [MainThread]: On master: Close
+[0m19:44:03.053474 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:44:03.053912 [debug] [MainThread]: Connection 'seed.petrophysics_dbt_flux.produto' was properly closed.
+[0m19:44:03.054424 [info ] [MainThread]: 
+[0m19:44:03.055007 [info ] [MainThread]: Finished running 6 seeds in 0 hours 0 minutes and 0.45 seconds (0.45s).
+[0m19:44:03.058232 [debug] [MainThread]: Command end result
+[0m19:44:03.099389 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m19:44:03.101470 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m19:44:03.108046 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/run_results.json
+[0m19:44:03.108514 [info ] [MainThread]: 
+[0m19:44:03.109266 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:44:03.109840 [info ] [MainThread]: 
+[0m19:44:03.110364 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6
+[0m19:44:03.112099 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 2.858598, "process_in_blocks": "0", "process_kernel_time": 0.233375, "process_mem_max_rss": "171120", "process_out_blocks": "3464", "process_user_time": 4.303917}
+[0m19:44:03.113264 [debug] [MainThread]: Command `dbt seed` succeeded at 19:44:03.113014 after 2.86 seconds
+[0m19:44:03.114115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e75615771d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e75619b9d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e75619b9d90>]}
+[0m19:44:03.115160 [debug] [MainThread]: Flushing usage events
+[0m19:44:04.072373 [debug] [MainThread]: An error was encountered while trying to flush usage events
