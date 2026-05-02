@@ -1,0 +1,21 @@
+cliente_id,Nome Cliente,E-mail,Dt Cadastro,Status Cliente,Segmento,Canal Preferido,Score Fidelidade
+1,Ana Paula Souza,ANA.SOUZA@EXAMPLE.COM,2024-11-03,Ativo,PF,site,82
+2,Bruno Lima,bruno.lima@example.com,03/12/2024,ativo,Pessoa Fisica,App,71
+3,Carla Mendes,CARLA.MENDES@example.com,2024/12/15,A,PF,SITE,65
+4,Diego Ferreira,diego.ferreira@example.com,2025-01-02,Inativo,B2B,marketplace,40
+5,Elaine Rocha,elaine.rocha@example.com,05/01/2025,ativo,PF,app,77
+6,Felipe Gomes,FELIPE.GOMES@example.com,2025/01/10,Ativo,Pessoa Fisica,Site,68
+7,Gabriela Martins,gabriela.martins@example.com,2025-01-14,A,PF,site,91
+8,Henrique Alves,henrique.alves@example.com,16/01/2025,ativo,B2B,APP,55
+9,Isabela Castro,ISABELA.CASTRO@example.com,2025/01/20,Ativo,PF,site,88
+10,Joao Pedro Nunes,joao.nunes@example.com,2025-01-25,ativo,Pessoa Fisica,marketplace,60
+11,Karen Ribeiro,KAREN.RIBEIRO@example.com,28/01/2025,A,,app,73
+12,Lucas Barbosa,lucas.barbosa@example.com,2025/02/01,Ativo,PF,site,69
+13,Mariana  Dias,mariana.dias@example.com,2025-02-04,ativo,Pessoa Fisica,Site,80
+14,Natalia Teixeira,NATALIA.TEIXEIRA@example.com,06/02/2025,Ativo,PF,app,84
+15,Otavio Moreira,otavio.moreira@example.com,2025/02/10,I,B2B,marketplace,36
+16,Patricia Araujo,patricia.araujo@example.com,2025-02-13,ativo,PF,site,79
+17,Rafael Cardoso,RAFAEL.CARDOSO@example.com,15/02/2025,Ativo,Pessoa Fisica,app,74
+18,Sabrina Melo,sabrina.melo@example.com,2025/02/18,A,PF,Site,83
+19,Thiago Rezende,thiago.rezende@example.com,2025-02-22,ativo,PF,site,67
+20,Vanessa Prado,VANESSA.PRADO@example.com,25/02/2025,Ativo,Pessoa Fisica,APP,86

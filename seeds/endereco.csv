@@ -1,0 +1,21 @@
+endereco_id,cliente_id,UF,Nome Cidade,CEP,Logradouro,bairro,numero,complemento
+1,1,SP,Sao Paulo,01001-000,Rua das Flores,Centro,101,apto 12
+2,2,sp,Campinas,13010-111,Av Brasil,CambuI,220,
+3,3,Sp,Santos ,11013-222,Rua do Porto,Ponta da Praia,45,Casa
+4,4,RJ,Rio de Janeiro,20040-333,Rua da Lapa,Lapa,78,
+5,5,rj,Niteroi,24020-444,Av Atlantica,Icarai,900,bloco B
+6,6,MG,Belo Horizonte,30110-555,Rua da Bahia,Centro,1500,
+7,7,mg,Uberlandia,38400-666,Av Rondon Pacheco,Saraiva,650,
+8,8,PR,Curitiba,80010-777,Rua XV de Novembro,Centro,300,sala 5
+9,9,pr,Londrina,86010-888,Av Higienopolis,Centro,410,
+10,10,RS,Porto Alegre,90020-999,Rua dos Andradas,Centro Historico,515,
+11,11,rs,Caxias do Sul,95010-101,Rua Sinimbu,Centro,222,
+12,12,BA,Salvador,40015-202,Av Sete de Setembro,Campo Grande,845,ap 44
+13,13,ba,Feira de Santana,44010-303,Rua Conselheiro Franco,Centro,90,
+14,14,PE,Recife,50030-404,Av Boa Viagem,Boa Viagem,1300,
+15,15,pe,Caruaru,55010-505,Rua 15 de Novembro,Centro,77,
+16,16,SC,Florianopolis,88010-606,Rua Felipe Schmidt,Centro,510,
+17,17,sc,Joinville,89201-707,Rua do Principe,Centro,199,
+18,18,GO,Goiania,74010-808,Av 85,Setor Sul,1440,
+19,19,go,Anapolis,75020-909,Rua Engenheiro Portela,Centro,63,
+20,20,CE,Fortaleza,60020-010,Av Beira Mar,Meireles,2500,torre mar

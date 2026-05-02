@@ -1,0 +1,101 @@
+pedido_id,cliente_id,DtPedido,Status Pedido,Forma Pgto,vl_frete,vl_desconto_pedido,cupom_codigo,Canal Venda,uf_entrega,CidadeEntrega
+1,1,03/01/2025,concluido,pix,9.90,0.00,,site,SP,Sao Paulo
+2,2,2025/01/05,Concluido,PIX,14.90,5.00,,Site,sp,campinas
+3,3,2025-01-07 11:21:00,ENTREGUE,cartao_credito,19.90,10.00,,app,Sp,Santos
+4,4,2025-01-09,cancelado,Cartao de Credito,24.90,15.00,BEMVINDO10,APP,rj,rio de janeiro
+5,5,11/01/2025,em separacao,boleto,29.90,0.00,FRETEGRATIS,marketplace,RJ,Niteroi
+6,6,2025/01/13,Em transporte,cartao_debito,0.00,0.00,APP5,site,mg,belo horizonte
+7,7,2025-01-15 15:49:00,faturado,pix,9.90,5.00,DADOS15,Site,MG,Uberlandia
+8,8,2025-01-17,Cancelado,PIX,14.90,10.00,,app,pr,curitiba
+9,9,19/01/2025,concluido,cartao_credito,19.90,15.00,,APP,PR,Londrina
+10,10,2025/01/21,Concluido,Cartao de Credito,24.90,0.00,,marketplace,rs,PORTO ALEGRE
+11,11,2025-01-23 09:17:00,ENTREGUE,boleto,29.90,0.00,,site,RS,Caxias do Sul
+12,12,2025-01-25,cancelado,cartao_debito,0.00,5.00,BEMVINDO10,Site,ba,salvador
+13,13,27/01/2025,em separacao,pix,9.90,10.00,FRETEGRATIS,app,BA,Feira de Santana
+14,14,2025/01/29,Em transporte,PIX,14.90,15.00,APP5,APP,pe,recife
+15,15,2025-01-31 13:45:00,faturado,cartao_credito,19.90,0.00,DADOS15,marketplace,PE,Caruaru
+16,16,2025-02-02,Cancelado,Cartao de Credito,24.90,0.00,,site,sc,florianopolis
+17,17,04/02/2025,concluido,boleto,29.90,5.00,,Site,SC,
+18,18,2025/02/06,Concluido,cartao_debito,0.00,10.00,,app,go,goiania
+19,19,2025-02-08 17:13:00,ENTREGUE,pix,9.90,15.00,,APP,GO,Anapolis
+20,20,2025-02-10,cancelado,PIX,14.90,0.00,BEMVINDO10,marketplace,ce,fortaleza
+21,1,12/02/2025,em separacao,cartao_credito,19.90,0.00,FRETEGRATIS,site,Sp,Sao Paulo 
+22,2,2025/02/14,Em transporte,Cartao de Credito,24.90,5.00,APP5,Site,SP,campinas
+23,3,2025-02-16 11:41:00,faturado,boleto,29.90,10.00,DADOS15,app,sp,Santos
+24,4,2025-02-18,Cancelado,cartao_debito,0.00,15.00,,APP,rj,rio de janeiro
+25,5,20/02/2025,concluido,pix,9.90,0.00,,marketplace,RJ,Niteroi
+26,6,2025/02/22,Concluido,PIX,14.90,0.00,,site,mg,belo horizonte
+27,7,2025-02-24 15:09:00,ENTREGUE,cartao_credito,19.90,5.00,,Site,MG,Uberlandia
+28,8,2025-02-26,cancelado,Cartao de Credito,24.90,10.00,BEMVINDO10,app,pr,curitiba
+29,9,28/02/2025,em separacao,boleto,29.90,15.00,FRETEGRATIS,APP,PR,Londrina
+30,10,2025/03/02,Em transporte,cartao_debito,0.00,0.00,APP5,marketplace,rs,PORTO ALEGRE
+31,11,2025-03-04 09:37:00,faturado,pix,9.90,0.00,DADOS15,site,RS,Caxias do Sul
+32,12,2025-03-06,Cancelado,PIX,14.90,5.00,,Site,ba,salvador
+33,13,08/03/2025,concluido,cartao_credito,19.90,10.00,,app,BA,Feira de Santana
+34,14,2025/03/10,Concluido,Cartao de Credito,24.90,15.00,,APP,pe,recife
+35,15,2025-03-12 13:05:00,ENTREGUE,boleto,29.90,0.00,,marketplace,PE,Caruaru
+36,16,2025-03-14,cancelado,cartao_debito,0.00,0.00,BEMVINDO10,site,sc,florianopolis
+37,17,16/03/2025,em separacao,pix,9.90,5.00,FRETEGRATIS,Site,SC,Joinville
+38,18,2025/03/18,Em transporte,PIX,14.90,10.00,APP5,app,go,goiania
+39,19,2025-03-20 17:33:00,faturado,cartao_credito,19.90,15.00,DADOS15,APP,GO,Anapolis
+40,20,2025-03-22,Cancelado,Cartao de Credito,24.90,0.00,,marketplace,ce,fortaleza
+41,1,24/03/2025,concluido,boleto,29.90,0.00,,site,sp,sao paulo
+42,2,2025/03/26,Concluido,cartao_debito,0.00,5.00,,Site,Sp,campinas
+43,3,2025-03-28 11:01:00,ENTREGUE,pix,9.90,10.00,,app,SP,Santos
+44,4,2025-03-30,cancelado,PIX,14.90,15.00,BEMVINDO10,APP,rj,
+45,5,01/04/2025,em separacao,cartao_credito,19.90,0.00,FRETEGRATIS,marketplace,RJ,Niteroi
+46,6,2025/04/03,Em transporte,Cartao de Credito,24.90,0.00,APP5,site,mg,belo horizonte
+47,7,2025-04-05 15:29:00,faturado,boleto,29.90,5.00,DADOS15,Site,MG,Uberlandia
+48,8,2025-04-07,Cancelado,cartao_debito,0.00,10.00,,app,pr,curitiba
+49,9,09/04/2025,concluido,pix,9.90,15.00,,APP,PR,Londrina
+50,10,2025/04/11,Concluido,PIX,14.90,0.00,,marketplace,rs,PORTO ALEGRE
+51,11,2025-04-13 09:57:00,ENTREGUE,cartao_credito,19.90,0.00,,site,RS,Caxias do Sul
+52,12,2025-04-15,cancelado,Cartao de Credito,24.90,5.00,BEMVINDO10,Site,ba,salvador
+53,13,17/04/2025,em separacao,boleto,29.90,10.00,FRETEGRATIS,app,BA,Feira de Santana
+54,14,2025/04/19,Em transporte,cartao_debito,0.00,15.00,APP5,APP,pe,recife
+55,15,2025-01-01 13:25:00,faturado,pix,9.90,0.00,DADOS15,marketplace,PE,Caruaru
+56,16,2025-01-03,Cancelado,PIX,14.90,0.00,,site,sc,florianopolis
+57,17,05/01/2025,concluido,cartao_credito,19.90,5.00,,Site,SC,Joinville
+58,18,2025/01/07,Concluido,Cartao de Credito,24.90,10.00,,app,go,goiania
+59,19,2025-01-09 17:53:00,ENTREGUE,boleto,29.90,15.00,,APP,GO,Anapolis
+60,20,2025-01-11,cancelado,cartao_debito,0.00,0.00,BEMVINDO10,marketplace,ce,fortaleza
+61,1,13/01/2025,em separacao,pix,9.90,0.00,FRETEGRATIS,site,SP,Sao Paulo
+62,2,2025/01/15,Em transporte,PIX,14.90,5.00,APP5,Site,sp,campinas
+63,3,2025-01-17 11:21:00,faturado,cartao_credito,19.90,10.00,DADOS15,app,Sp,Santos
+64,4,2025-01-19,Cancelado,Cartao de Credito,24.90,15.00,,APP,rj,rio de janeiro
+65,5,21/01/2025,concluido,boleto,29.90,0.00,,marketplace,RJ,Niteroi
+66,6,2025/01/23,Concluido,cartao_debito,0.00,0.00,,site,mg,belo horizonte
+67,7,2025-01-25 15:49:00,ENTREGUE,pix,9.90,5.00,,Site,MG,Uberlandia
+68,8,2025-01-27,cancelado,PIX,14.90,10.00,BEMVINDO10,app,pr,curitiba
+69,9,29/01/2025,em separacao,cartao_credito,19.90,15.00,FRETEGRATIS,APP,PR,Londrina
+70,10,2025/01/31,Em transporte,Cartao de Credito,24.90,0.00,APP5,marketplace,rs,PORTO ALEGRE
+71,11,2025-02-02 09:17:00,faturado,boleto,29.90,0.00,DADOS15,site,RS,Caxias do Sul
+72,12,2025-02-04,Cancelado,cartao_debito,0.00,5.00,,Site,ba,salvador
+73,13,06/02/2025,concluido,pix,9.90,10.00,,app,BA,Feira de Santana
+74,14,2025/02/08,Concluido,PIX,14.90,15.00,,APP,pe,recife
+75,15,2025-02-10 13:45:00,ENTREGUE,cartao_credito,19.90,0.00,,marketplace,PE,Caruaru
+76,16,2025-02-12,cancelado,Cartao de Credito,24.90,0.00,BEMVINDO10,site,sc,florianopolis
+77,17,14/02/2025,em separacao,boleto,29.90,5.00,FRETEGRATIS,Site,SC,Joinville
+78,18,2025/02/16,Em transporte,cartao_debito,0.00,10.00,APP5,app,go,goiania
+79,19,2025-02-18 17:13:00,faturado,pix,9.90,15.00,DADOS15,APP,GO,Anapolis
+80,20,2025-02-20,cancelado,PIX,14.90,0.00,,marketplace,ce,fortaleza
+81,1,22/02/2025,concluido,cartao_credito,19.90,0.00,,site,Sp,Sao Paulo 
+82,2,2025/02/24,Concluido,Cartao de Credito,24.90,5.00,,Site,SP,campinas
+83,3,2025-02-26 11:41:00,ENTREGUE,boleto,29.90,10.00,,app,sp,
+84,4,2025-02-28,cancelado,cartao_debito,0.00,15.00,BEMVINDO10,APP,rj,rio de janeiro
+85,5,02/03/2025,em separacao,pix,9.90,0.00,FRETEGRATIS,marketplace,RJ,Niteroi
+86,6,2025/03/04,Em transporte,PIX,14.90,0.00,APP5,site,mg,belo horizonte
+87,7,2025-03-06 15:09:00,faturado,cartao_credito,19.90,5.00,DADOS15,Site,MG,Uberlandia
+88,8,2025-03-08,cancelado,Cartao de Credito,24.90,10.00,,app,pr,curitiba
+89,9,10/03/2025,concluido,boleto,29.90,15.00,,APP,PR,Londrina
+90,10,2025/03/12,Concluido,cartao_debito,0.00,0.00,,marketplace,rs,PORTO ALEGRE
+91,11,2025-03-14 09:37:00,ENTREGUE,pix,9.90,0.00,,site,RS,Caxias do Sul
+92,12,2025-03-16,cancelado,PIX,14.90,5.00,BEMVINDO10,Site,ba,salvador
+93,13,18/03/2025,em separacao,cartao_credito,19.90,10.00,FRETEGRATIS,app,BA,Feira de Santana
+94,14,2025/03/20,Em transporte,Cartao de Credito,24.90,15.00,APP5,APP,pe,recife
+95,15,2025-03-22 13:05:00,faturado,boleto,29.90,0.00,DADOS15,marketplace,PE,Caruaru
+96,16,2025-03-24,Cancelado,cartao_debito,0.00,0.00,,site,sc,florianopolis
+97,17,26/03/2025,concluido,pix,9.90,5.00,,Site,SC,Joinville
+98,18,2025/03/28,Concluido,PIX,14.90,10.00,,app,go,goiania
+99,19,2025-03-30 17:33:00,ENTREGUE,cartao_credito,19.90,15.00,,APP,GO,Anapolis
+100,20,2025-04-01,cancelado,Cartao de Credito,24.90,0.00,BEMVINDO10,marketplace,ce,fortaleza

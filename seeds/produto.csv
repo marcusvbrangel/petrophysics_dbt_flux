@@ -1,0 +1,21 @@
+produto_id,Nome Produto,ativo?,Qtd Estoque,Preco Atual,categoria_id,Marca,Dt Cadastro
+1,Fone Bluetooth X100,Ativo,120,199.90,1,SoundMax,2024-10-01
+2,Caixa de Som Portatil,ativo,80,349.90,1,SoundMax,02/10/2024
+3,Smartwatch Move,A,65,599.00,1,Pulse,2024/10/05
+4,Air Fryer 5L,Ativo,50,429.90,2,KitchenPro,2024-10-08
+5,Jogo de Facas Premium,ativo,35,159.90,2,CasaMix,10/10/2024
+6,Garrafa Termica Inox,A,140,89.90,2,CasaMix,2024/10/11
+7,Tapete de Yoga,Ativo,95,119.90,3,MoveFit,2024-10-15
+8,Kit  Halteres 10kg,ativo,18,249.90,3,MoveFit,18/10/2024
+9,Bola de Futebol Pro,A,70,129.90,3,Arena,2024/10/20
+10,Livro SQL na Pratica,Ativo,110,79.90,4,Editora Dados,2024-10-22
+11,Livro Analise de Dados,ativo,90,99.90,4,Editora Dados,25/10/2024
+12,Guia de dbt e Analytics,A,75,109.90,4,Data Books,2024/10/28
+13,Serum Vitamina C,Ativo,130,69.90,5,SkinLab,2024-11-01
+14,Protetor Solar FPS 50,ativo,85,59.90,5,SkinLab,03/11/2024
+15,Shampoo Reconstrucao,A,100,39.90,5,BeautyCo,2024/11/05
+16,Mouse Gamer RGB,Ativo,60,149.90,6,ByteTech,2024-11-08
+17,Teclado Mecanico TKL,ativo,9,289.90,6,ByteTech,11/11/2024
+18,Mochila Urbana,A,150,139.90,7,UrbanGo,2024/11/14
+19,Camiseta Dry Fit,Ativo,200,79.90,7,UrbanGo,2024-11-18
+20,Cama para Pet M,inativo,0,189.90,8,PetHome,20/11/2024
