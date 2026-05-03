@@ -1,0 +1,99 @@
+version: 2
+
+models:
+  - name: int_clientes_com_endereco
+    description: "Cliente enriquecido com endereco."
+    columns:
+      - name: cliente_id
+        data_tests:
+          - unique
+          - not_null
+      - name: email
+        data_tests:
+          - unique
+          - not_null
+      - name: endereco_id
+        data_tests:
+          - unique
+          - not_null
+      - name: uf
+        data_tests:
+          - not_null
+
+  - name: int_produtos_com_categoria
+    description: "Produto enriquecido com categoria."
+    columns:
+      - name: produto_id
+        data_tests:
+          - unique
+          - not_null
+      - name: categoria_id
+        data_tests:
+          - not_null
+      - name: nome_categoria
+        data_tests:
+          - not_null
+      - name: valor_estoque_atual
+        data_tests:
+          - not_null
+
+  - name: int_itens_pedido_enriquecidos
+    description: "Item de pedido enriquecido com contexto de pedido e produto."
+    columns:
+      - name: pedido_id
+        data_tests:
+          - not_null
+      - name: item_seq
+        data_tests:
+          - not_null
+      - name: cliente_id
+        data_tests:
+          - not_null
+      - name: produto_id
+        data_tests:
+          - not_null
+      - name: dt_pedido
+        data_tests:
+          - not_null
+      - name: nome_produto
+        data_tests:
+          - not_null
+      - name: nome_categoria
+        data_tests:
+          - not_null
+      - name: subtotal_item
+        data_tests:
+          - not_null
+
+  - name: int_pedidos_enriquecidos
+    description: "Pedido enriquecido com cliente, endereco e agregacoes de itens."
+    columns:
+      - name: pedido_id
+        data_tests:
+          - unique
+          - not_null
+      - name: cliente_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_clientes_com_endereco')
+                field: cliente_id
+      - name: nome_cliente
+        data_tests:
+          - not_null
+      - name: dt_pedido
+        data_tests:
+          - not_null
+      - name: status_pedido
+        data_tests:
+          - not_null
+      - name: quantidade_itens_distintos
+        data_tests:
+          - not_null
+      - name: quantidade_total_itens
+        data_tests:
+          - not_null
+      - name: valor_total_pedido
+        data_tests:
+          - not_null

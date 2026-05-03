@@ -1,0 +1,202 @@
+version: 2
+
+models:
+  - name: stg_cliente
+    description: "Camada de staging para clientes."
+    columns:
+      - name: cliente_id
+        data_tests:
+          - unique
+          - not_null
+      - name: nome_cliente
+        data_tests:
+          - not_null
+      - name: email
+        data_tests:
+          - unique
+          - not_null
+      - name: dt_cadastro
+        data_tests:
+          - not_null
+      - name: status_cliente
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['ativo', 'inativo']
+      - name: segmento
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['pf', 'b2b']
+      - name: canal_preferido
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['site', 'app', 'marketplace']
+      - name: score_fidelidade
+        data_tests:
+          - not_null
+
+  - name: stg_endereco
+    description: "Camada de staging para enderecos."
+    columns:
+      - name: endereco_id
+        data_tests:
+          - unique
+          - not_null
+      - name: cliente_id
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_cliente')
+                field: cliente_id
+      - name: uf
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['SP', 'RJ', 'MG', 'PR', 'RS', 'BA', 'PE', 'SC', 'GO', 'CE']
+      - name: cidade
+        data_tests:
+          - not_null
+      - name: cep
+        data_tests:
+          - not_null
+
+  - name: stg_categoria
+    description: "Camada de staging para categorias."
+    columns:
+      - name: categoria_id
+        data_tests:
+          - unique
+          - not_null
+      - name: sigla_categoria
+        data_tests:
+          - unique
+          - not_null
+      - name: nome_categoria
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_produto
+    description: "Camada de staging para produtos."
+    columns:
+      - name: produto_id
+        data_tests:
+          - unique
+          - not_null
+      - name: nome_produto
+        data_tests:
+          - unique
+          - not_null
+      - name: status_produto
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['ativo', 'inativo']
+      - name: quantidade_estoque
+        data_tests:
+          - not_null
+      - name: preco_atual
+        data_tests:
+          - not_null
+      - name: categoria_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_categoria')
+                field: categoria_id
+      - name: dt_cadastro
+        data_tests:
+          - not_null
+
+  - name: stg_pedidos
+    description: "Camada de staging para pedidos."
+    columns:
+      - name: pedido_id
+        data_tests:
+          - unique
+          - not_null
+      - name: cliente_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_cliente')
+                field: cliente_id
+      - name: dt_pedido
+        data_tests:
+          - not_null
+      - name: status_pedido
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['cancelado', 'concluido', 'em_separacao', 'em_transporte', 'entregue', 'faturado']
+      - name: forma_pagamento
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['boleto', 'cartao_credito', 'cartao_debito', 'pix']
+      - name: valor_frete
+        data_tests:
+          - not_null
+      - name: valor_desconto_pedido
+        data_tests:
+          - not_null
+      - name: canal_venda
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['site', 'app', 'marketplace']
+      - name: uf_entrega
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['SP', 'RJ', 'MG', 'PR', 'RS', 'BA', 'PE', 'SC', 'GO', 'CE']
+
+  - name: stg_item_pedido
+    description: "Camada de staging para itens de pedido."
+    columns:
+      - name: pedido_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_pedidos')
+                field: pedido_id
+      - name: item_seq
+        data_tests:
+          - not_null
+      - name: produto_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_produto')
+                field: produto_id
+      - name: quantidade
+        data_tests:
+          - not_null
+      - name: preco_unitario
+        data_tests:
+          - not_null
+      - name: valor_desconto_item
+        data_tests:
+          - not_null
+      - name: subtotal_item
+        data_tests:
+          - not_null
+      - name: valor_bruto_item
+        data_tests:
+          - not_null

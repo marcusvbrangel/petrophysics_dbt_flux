@@ -1,0 +1,142 @@
+version: 2
+
+models:
+  - name: dim_clientes
+    description: "Dimensao final de clientes para consumo analitico."
+    columns:
+      - name: cliente_id
+        data_tests:
+          - unique
+          - not_null
+      - name: email
+        data_tests:
+          - unique
+          - not_null
+      - name: dt_cadastro
+        data_tests:
+          - not_null
+      - name: status_cliente
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['ativo', 'inativo']
+      - name: segmento
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['pf', 'b2b']
+      - name: canal_preferido
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['site', 'app', 'marketplace']
+      - name: faixa_score_fidelidade
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['alta', 'media', 'baixa']
+      - name: uf_cadastro
+        data_tests:
+          - not_null
+
+  - name: dim_produtos
+    description: "Dimensao final de produtos com contexto de categoria."
+    columns:
+      - name: produto_id
+        data_tests:
+          - unique
+          - not_null
+      - name: categoria_id
+        data_tests:
+          - not_null
+      - name: nome_categoria
+        data_tests:
+          - not_null
+      - name: status_produto
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['ativo', 'inativo']
+      - name: situacao_estoque
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['sem_estoque', 'baixo_estoque', 'estoque_medio', 'estoque_alto']
+      - name: faixa_preco
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['ate_99', '100_a_299', '300_a_599', '600_ou_mais']
+      - name: preco_atual
+        data_tests:
+          - not_null
+
+  - name: fact_vendas
+    description: "Fato final de vendas no grao de item de pedido."
+    columns:
+      - name: pedido_item_id
+        data_tests:
+          - unique
+          - not_null
+      - name: pedido_id
+        data_tests:
+          - not_null
+      - name: cliente_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_clientes')
+                field: cliente_id
+      - name: produto_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_produtos')
+                field: produto_id
+      - name: dt_pedido
+        data_tests:
+          - not_null
+      - name: status_pedido
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['cancelado', 'concluido', 'em_separacao', 'em_transporte', 'entregue', 'faturado']
+      - name: forma_pagamento
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['boleto', 'cartao_credito', 'cartao_debito', 'pix']
+      - name: canal_venda
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['site', 'app', 'marketplace']
+      - name: quantidade
+        data_tests:
+          - not_null
+      - name: quantidade_vendida
+        data_tests:
+          - not_null
+      - name: valor_bruto_item
+        data_tests:
+          - not_null
+      - name: valor_desconto_item
+        data_tests:
+          - not_null
+      - name: valor_liquido_item
+        data_tests:
+          - not_null
+      - name: receita_liquida_item
+        data_tests:
+          - not_null
