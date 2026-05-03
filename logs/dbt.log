@@ -408,3 +408,1894 @@ select
 [0m19:44:03.114115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e75615771d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e75619b9d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e75619b9d90>]}
 [0m19:44:03.115160 [debug] [MainThread]: Flushing usage events
 [0m19:44:04.072373 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:53:00.129665 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ada4eb45c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ada4ece3e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ada4eb45ed0>]}
+
+
+============================== 20:53:00.133676 | 0b1069a8-9940-41e7-a240-293ea624abc4 ==============================
+[0m20:53:00.133676 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:53:00.134561 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_format': 'default', 'cache_selected_only': 'False', 'no_print': 'None', 'target_path': 'None', 'indirect_selection': 'eager', 'write_json': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'partial_parse': 'True', 'introspect': 'True', 'empty': 'False', 'invocation_command': 'dbt run --select stg_cliente', 'quiet': 'False', 'use_colors': 'True', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'profiles_dir': '/home/wolf/.dbt', 'fail_fast': 'False', 'log_path': '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/logs'}
+[0m20:53:00.440831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0b1069a8-9940-41e7-a240-293ea624abc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ada4e875250>]}
+[0m20:53:00.534070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0b1069a8-9940-41e7-a240-293ea624abc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ada4fada9d0>]}
+[0m20:53:00.536323 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m20:53:00.670918 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m20:53:00.851135 [debug] [MainThread]: Partial parsing enabled: 2 files deleted, 6 files added, 0 files changed.
+[0m20:53:00.851943 [debug] [MainThread]: Partial parsing: added file: petrophysics_dbt_flux://models/staging/stg_pedidos.sql
+[0m20:53:00.852514 [debug] [MainThread]: Partial parsing: added file: petrophysics_dbt_flux://models/staging/stg_categoria.sql
+[0m20:53:00.853142 [debug] [MainThread]: Partial parsing: added file: petrophysics_dbt_flux://models/staging/stg_produto.sql
+[0m20:53:00.853681 [debug] [MainThread]: Partial parsing: added file: petrophysics_dbt_flux://models/staging/stg_item_pedido.sql
+[0m20:53:00.854211 [debug] [MainThread]: Partial parsing: added file: petrophysics_dbt_flux://models/staging/stg_endereco.sql
+[0m20:53:00.854743 [debug] [MainThread]: Partial parsing: added file: petrophysics_dbt_flux://models/staging/stg_cliente.sql
+[0m20:53:00.855286 [debug] [MainThread]: Partial parsing: deleted file: petrophysics_dbt_flux://models/example/my_first_dbt_model.sql
+[0m20:53:00.855836 [debug] [MainThread]: Partial parsing: deleted file: petrophysics_dbt_flux://models/example/my_second_dbt_model.sql
+[0m20:53:01.309530 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_first_dbt_model' in the 'models' section of file 'models/example/schema.yml'
+[0m20:53:01.311565 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_second_dbt_model' in the 'models' section of file 'models/example/schema.yml'
+[0m20:53:01.444911 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.petrophysics_dbt_flux.unique_my_first_dbt_model_id.16e066b321' (models/example/schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m20:53:01.445792 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.petrophysics_dbt_flux.not_null_my_first_dbt_model_id.5fb22c2710' (models/example/schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m20:53:01.446950 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.petrophysics_dbt_flux.unique_my_second_dbt_model_id.57a0f8c493' (models/example/schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m20:53:01.447831 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.petrophysics_dbt_flux.not_null_my_second_dbt_model_id.151b76d778' (models/example/schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m20:53:01.547532 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.petrophysics_dbt_flux.example
+[0m20:53:01.555960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0b1069a8-9940-41e7-a240-293ea624abc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ada48540310>]}
+[0m20:53:01.679351 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m20:53:01.681704 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m20:53:01.693119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0b1069a8-9940-41e7-a240-293ea624abc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ada47c2af50>]}
+[0m20:53:01.693873 [info ] [MainThread]: Found 6 seeds, 6 models, 475 macros
+[0m20:53:01.694480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0b1069a8-9940-41e7-a240-293ea624abc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ada488f8d50>]}
+[0m20:53:01.697522 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m20:53:01.698616 [debug] [MainThread]: Command end result
+[0m20:53:01.744059 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m20:53:01.746398 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m20:53:01.750398 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/run_results.json
+[0m20:53:01.751641 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.7014725, "process_in_blocks": "0", "process_kernel_time": 0.292688, "process_mem_max_rss": "151828", "process_out_blocks": "3296", "process_user_time": 3.503275}
+[0m20:53:01.752329 [debug] [MainThread]: Command `dbt run` succeeded at 20:53:01.752193 after 1.70 seconds
+[0m20:53:01.752894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ada53177150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ada4edfac10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ada4edfaa90>]}
+[0m20:53:01.753506 [debug] [MainThread]: Flushing usage events
+[0m20:53:02.708258 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:54:34.963298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7544dcd21610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7544dcd215d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7544dcd21bd0>]}
+
+
+============================== 20:54:34.967350 | f97fb638-80a8-44d2-8388-905196079115 ==============================
+[0m20:54:34.967350 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:54:34.968235 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'profiles_dir': '/home/wolf/.dbt', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'partial_parse': 'True', 'log_path': '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/logs', 'invocation_command': 'dbt run --select stg_cliente', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'target_path': 'None', 'no_print': 'None', 'quiet': 'False', 'version_check': 'True', 'use_colors': 'True', 'warn_error': 'None', 'printer_width': '80', 'empty': 'False', 'static_parser': 'True', 'introspect': 'True', 'debug': 'False'}
+[0m20:54:35.281284 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f97fb638-80a8-44d2-8388-905196079115', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7544dcbe3350>]}
+[0m20:54:35.374326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f97fb638-80a8-44d2-8388-905196079115', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7544dfcb3710>]}
+[0m20:54:35.376584 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m20:54:35.512036 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m20:54:35.678046 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m20:54:35.678826 [debug] [MainThread]: Partial parsing: added file: petrophysics_dbt_flux://models/example/my_first_dbt_model.sql
+[0m20:54:35.679359 [debug] [MainThread]: Partial parsing: added file: petrophysics_dbt_flux://models/example/my_second_dbt_model.sql
+[0m20:54:36.132224 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f97fb638-80a8-44d2-8388-905196079115', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7544dca38210>]}
+[0m20:54:36.271850 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m20:54:36.274333 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m20:54:36.284524 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f97fb638-80a8-44d2-8388-905196079115', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7544df90dcd0>]}
+[0m20:54:36.285980 [info ] [MainThread]: Found 6 seeds, 8 models, 475 macros
+[0m20:54:36.286820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f97fb638-80a8-44d2-8388-905196079115', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7544d68d3850>]}
+[0m20:54:36.289573 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m20:54:36.290763 [debug] [MainThread]: Command end result
+[0m20:54:36.332253 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m20:54:36.334727 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m20:54:36.339073 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/run_results.json
+[0m20:54:36.340400 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.4569042, "process_in_blocks": "0", "process_kernel_time": 0.255086, "process_mem_max_rss": "150508", "process_out_blocks": "3328", "process_user_time": 3.249107}
+[0m20:54:36.341104 [debug] [MainThread]: Command `dbt run` succeeded at 20:54:36.340967 after 1.46 seconds
+[0m20:54:36.341655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7544e1377150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7544e1728110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7544e17b96d0>]}
+[0m20:54:36.342207 [debug] [MainThread]: Flushing usage events
+[0m20:54:37.042123 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:56:58.457809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dbe4fa5d4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dbe4fa5d390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dbe4fa5d810>]}
+
+
+============================== 20:56:58.461235 | f31c08c6-5d51-4037-a79e-98a04d809908 ==============================
+[0m20:56:58.461235 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:56:58.462271 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/home/wolf/.dbt', 'quiet': 'False', 'static_parser': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'indirect_selection': 'eager', 'target_path': 'None', 'write_json': 'True', 'log_path': '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/logs', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'cache_selected_only': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'warn_error': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'no_print': 'None', 'invocation_command': 'dbt run --select stg_cliente', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'fail_fast': 'False'}
+[0m20:56:58.714915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f31c08c6-5d51-4037-a79e-98a04d809908', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dbe4f792010>]}
+[0m20:56:58.791055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f31c08c6-5d51-4037-a79e-98a04d809908', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dbe49969dd0>]}
+[0m20:56:58.792927 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m20:56:58.913084 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m20:56:59.060083 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:56:59.060608 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:56:59.060995 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:56:59.104700 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f31c08c6-5d51-4037-a79e-98a04d809908', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dbe4976dbd0>]}
+[0m20:56:59.278185 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m20:56:59.280147 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m20:56:59.288528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f31c08c6-5d51-4037-a79e-98a04d809908', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dbe498d5dd0>]}
+[0m20:56:59.289148 [info ] [MainThread]: Found 6 seeds, 8 models, 475 macros
+[0m20:56:59.289691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f31c08c6-5d51-4037-a79e-98a04d809908', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dbe498fab50>]}
+[0m20:56:59.292228 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m20:56:59.294709 [debug] [MainThread]: Command end result
+[0m20:56:59.330575 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m20:56:59.332479 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m20:56:59.335916 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/run_results.json
+[0m20:56:59.336940 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.949912, "process_in_blocks": "0", "process_kernel_time": 0.250497, "process_mem_max_rss": "147520", "process_out_blocks": "2248", "process_user_time": 2.389208}
+[0m20:56:59.337554 [debug] [MainThread]: Command `dbt run` succeeded at 20:56:59.337414 after 0.95 seconds
+[0m20:56:59.338013 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dbe5417b1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dbe545bcd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dbe4f882510>]}
+[0m20:56:59.338493 [debug] [MainThread]: Flushing usage events
+[0m20:57:00.060121 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:57:30.060874 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76625941f190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76625a104710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76625928a510>]}
+
+
+============================== 20:57:30.065801 | 694fcf55-ba81-43d4-bdd3-3f97f61740e4 ==============================
+[0m20:57:30.065801 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:57:30.067283 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'no_print': 'None', 'profiles_dir': '/home/wolf/.dbt', 'quiet': 'False', 'introspect': 'True', 'target_path': 'None', 'printer_width': '80', 'use_colors': 'True', 'static_parser': 'True', 'debug': 'False', 'empty': 'None', 'log_path': '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/logs', 'warn_error': 'None', 'indirect_selection': 'eager', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt ls --resource-type model', 'log_cache_events': 'False', 'write_json': 'True'}
+[0m20:57:30.100707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x770a61d4ff50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x770a64795090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x770a61bb3b10>]}
+
+
+============================== 20:57:30.107773 | 79853847-bc14-4fd0-a816-b11eda998bee ==============================
+[0m20:57:30.107773 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:57:30.109326 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'invocation_command': 'dbt ls --resource-type model --select stg_cliente', 'quiet': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_path': '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/logs', 'log_format': 'default', 'debug': 'False', 'profiles_dir': '/home/wolf/.dbt', 'static_parser': 'True', 'log_cache_events': 'False', 'version_check': 'True', 'use_colors': 'True', 'warn_error': 'None', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'write_json': 'True', 'target_path': 'None', 'printer_width': '80', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'empty': 'None'}
+[0m20:57:30.530695 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '79853847-bc14-4fd0-a816-b11eda998bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x770a61d4c3d0>]}
+[0m20:57:30.656740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '694fcf55-ba81-43d4-bdd3-3f97f61740e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7662592e28d0>]}
+[0m20:57:30.716354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '79853847-bc14-4fd0-a816-b11eda998bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x770a64cadc50>]}
+[0m20:57:30.720183 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m20:57:30.845101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '694fcf55-ba81-43d4-bdd3-3f97f61740e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76625c3b72d0>]}
+[0m20:57:30.847654 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m20:57:31.054647 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m20:57:31.145828 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m20:57:31.326219 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:57:31.326893 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:57:31.327423 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:57:31.385466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '79853847-bc14-4fd0-a816-b11eda998bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x770a61d4c8d0>]}
+[0m20:57:31.389959 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:57:31.390659 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:57:31.391212 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:57:31.458177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '694fcf55-ba81-43d4-bdd3-3f97f61740e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7662531d4c50>]}
+[0m20:57:31.543719 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m20:57:31.546641 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m20:57:31.617991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '79853847-bc14-4fd0-a816-b11eda998bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x770a61bfc1d0>]}
+[0m20:57:31.619671 [info ] [MainThread]: Found 6 seeds, 8 models, 475 macros
+[0m20:57:31.620508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '79853847-bc14-4fd0-a816-b11eda998bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x770a64968710>]}
+[0m20:57:31.622128 [info ] [MainThread]: petrophysics_dbt_flux.staging.stg_cliente
+[0m20:57:31.624110 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": true, "command_wall_clock_time": 1.6250386, "process_in_blocks": "0", "process_kernel_time": 0.332971, "process_mem_max_rss": "146860", "process_out_blocks": "1144", "process_user_time": 3.835157}
+[0m20:57:31.624959 [debug] [MainThread]: Command `dbt ls` succeeded at 20:57:31.624803 after 1.63 seconds
+[0m20:57:31.625612 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x770a66377650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x770a667b61d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x770a667b6250>]}
+[0m20:57:31.626240 [debug] [MainThread]: Flushing usage events
+[0m20:57:31.630587 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:57:31.656273 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m20:57:31.658905 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m20:57:31.749578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '694fcf55-ba81-43d4-bdd3-3f97f61740e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76625b9b4350>]}
+[0m20:57:31.750874 [info ] [MainThread]: Found 6 seeds, 8 models, 475 macros
+[0m20:57:31.752095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '694fcf55-ba81-43d4-bdd3-3f97f61740e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7662534ac650>]}
+[0m20:57:31.754878 [info ] [MainThread]: petrophysics_dbt_flux.example.my_first_dbt_model
+[0m20:57:31.756068 [info ] [MainThread]: petrophysics_dbt_flux.example.my_second_dbt_model
+[0m20:57:31.757896 [info ] [MainThread]: petrophysics_dbt_flux.staging.stg_categoria
+[0m20:57:31.759745 [info ] [MainThread]: petrophysics_dbt_flux.staging.stg_cliente
+[0m20:57:31.762241 [info ] [MainThread]: petrophysics_dbt_flux.staging.stg_endereco
+[0m20:57:31.764291 [info ] [MainThread]: petrophysics_dbt_flux.staging.stg_item_pedido
+[0m20:57:31.765968 [info ] [MainThread]: petrophysics_dbt_flux.staging.stg_pedidos
+[0m20:57:31.767519 [info ] [MainThread]: petrophysics_dbt_flux.staging.stg_produto
+[0m20:57:31.770320 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": true, "command_wall_clock_time": 1.8199929, "process_in_blocks": "0", "process_kernel_time": 0.32317, "process_mem_max_rss": "146892", "process_out_blocks": "1136", "process_user_time": 4.03864}
+[0m20:57:31.772430 [debug] [MainThread]: Command `dbt ls` succeeded at 20:57:31.772090 after 1.82 seconds
+[0m20:57:31.773346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76625da7b390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76625b09fb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76625dbb9990>]}
+[0m20:57:31.774246 [debug] [MainThread]: Flushing usage events
+[0m20:57:31.779427 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:59:09.618069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76dff2076010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76dff240fc90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76dff2075350>]}
+
+
+============================== 20:59:09.622077 | 1f42f626-d7d1-46ec-8f0d-c5a7d84c5ae8 ==============================
+[0m20:59:09.622077 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:59:09.623340 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'log_format': 'default', 'write_json': 'True', 'use_colors': 'True', 'static_parser': 'True', 'printer_width': '80', 'empty': 'False', 'log_cache_events': 'False', 'quiet': 'False', 'debug': 'False', 'no_print': 'None', 'introspect': 'True', 'invocation_command': 'dbt run --select stg_cliente', 'version_check': 'True', 'fail_fast': 'False', 'profiles_dir': '/home/wolf/.dbt', 'indirect_selection': 'eager', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/logs', 'partial_parse': 'True'}
+[0m20:59:09.935296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1f42f626-d7d1-46ec-8f0d-c5a7d84c5ae8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76dff4706250>]}
+[0m20:59:10.027252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1f42f626-d7d1-46ec-8f0d-c5a7d84c5ae8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76dff5293d90>]}
+[0m20:59:10.029468 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m20:59:10.167802 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m20:59:10.331707 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:59:10.332590 [debug] [MainThread]: Partial parsing: updated file: petrophysics_dbt_flux://models/staging/stg_cliente.sql
+[0m20:59:10.778314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1f42f626-d7d1-46ec-8f0d-c5a7d84c5ae8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76dff1fefcd0>]}
+[0m20:59:10.909070 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m20:59:10.911501 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m20:59:10.921121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1f42f626-d7d1-46ec-8f0d-c5a7d84c5ae8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76dfebd09910>]}
+[0m20:59:10.921916 [info ] [MainThread]: Found 6 seeds, 8 models, 475 macros
+[0m20:59:10.922508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1f42f626-d7d1-46ec-8f0d-c5a7d84c5ae8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76dfebc4bf10>]}
+[0m20:59:10.925906 [info ] [MainThread]: 
+[0m20:59:10.926748 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:59:10.927293 [info ] [MainThread]: 
+[0m20:59:10.928080 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m20:59:10.929319 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m20:59:10.978540 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m20:59:10.979120 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m20:59:10.979611 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:59:10.997258 [debug] [ThreadPool]: SQL status: OK in 0.018 seconds
+[0m20:59:10.999041 [debug] [ThreadPool]: On list_dev: Close
+[0m20:59:10.999986 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m20:59:11.000649 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m20:59:11.009369 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m20:59:11.009947 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m20:59:11.010419 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:59:11.011854 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m20:59:11.013702 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m20:59:11.014203 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m20:59:11.015087 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m20:59:11.015608 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m20:59:11.016072 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m20:59:11.016980 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m20:59:11.018178 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m20:59:11.018681 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m20:59:11.019133 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m20:59:11.019883 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m20:59:11.020384 [debug] [ThreadPool]: On create_dev_main: Close
+[0m20:59:11.028588 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dev_main, now list_dev_main)
+[0m20:59:11.036248 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m20:59:11.036835 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m20:59:11.037310 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:59:11.038208 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m20:59:11.038723 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m20:59:11.039228 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m20:59:11.043311 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m20:59:11.045310 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m20:59:11.046249 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m20:59:11.046771 [debug] [ThreadPool]: On list_dev_main: Close
+[0m20:59:11.049040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1f42f626-d7d1-46ec-8f0d-c5a7d84c5ae8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76dfebf3fa90>]}
+[0m20:59:11.049731 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:59:11.050217 [debug] [MainThread]: On master: BEGIN
+[0m20:59:11.050698 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:59:11.051618 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m20:59:11.052125 [debug] [MainThread]: On master: COMMIT
+[0m20:59:11.052639 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:59:11.053109 [debug] [MainThread]: On master: COMMIT
+[0m20:59:11.053827 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m20:59:11.054382 [debug] [MainThread]: On master: Close
+[0m20:59:11.057211 [debug] [Thread-1 (]: Began running node model.petrophysics_dbt_flux.stg_cliente
+[0m20:59:11.058008 [info ] [Thread-1 (]: 1 of 1 START sql view model main.stg_cliente ................................... [RUN]
+[0m20:59:11.058792 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main, now model.petrophysics_dbt_flux.stg_cliente)
+[0m20:59:11.059590 [debug] [Thread-1 (]: Began compiling node model.petrophysics_dbt_flux.stg_cliente
+[0m20:59:11.069612 [debug] [Thread-1 (]: Writing injected SQL for node "model.petrophysics_dbt_flux.stg_cliente"
+[0m20:59:11.070641 [debug] [Thread-1 (]: Began executing node model.petrophysics_dbt_flux.stg_cliente
+[0m20:59:11.111868 [debug] [Thread-1 (]: Writing runtime sql for node "model.petrophysics_dbt_flux.stg_cliente"
+[0m20:59:11.112914 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m20:59:11.113559 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: BEGIN
+[0m20:59:11.114112 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:59:11.115121 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m20:59:11.115719 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m20:59:11.116285 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+
+  
+  create view "dev"."main"."stg_cliente__dbt_tmp" as (
+    select *
+from "dev"."main"."cliente"
+  );
+
+[0m20:59:11.117470 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m20:59:11.125766 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m20:59:11.126529 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+alter view "dev"."main"."stg_cliente__dbt_tmp" rename to "stg_cliente"
+[0m20:59:11.127641 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m20:59:11.143354 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: COMMIT
+[0m20:59:11.144044 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m20:59:11.144615 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: COMMIT
+[0m20:59:11.150233 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m20:59:11.164352 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m20:59:11.165384 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+
+      drop view if exists "dev"."main"."stg_cliente__dbt_backup" cascade
+    
+[0m20:59:11.166841 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m20:59:11.170956 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: Close
+[0m20:59:11.173704 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f42f626-d7d1-46ec-8f0d-c5a7d84c5ae8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76dfec08bdd0>]}
+[0m20:59:11.174933 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.stg_cliente .............................. [[32mOK[0m in 0.11s]
+[0m20:59:11.176108 [debug] [Thread-1 (]: Finished running node model.petrophysics_dbt_flux.stg_cliente
+[0m20:59:11.178690 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:59:11.179393 [debug] [MainThread]: On master: BEGIN
+[0m20:59:11.179994 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:59:11.181301 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m20:59:11.181953 [debug] [MainThread]: On master: COMMIT
+[0m20:59:11.182583 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:59:11.183153 [debug] [MainThread]: On master: COMMIT
+[0m20:59:11.183958 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m20:59:11.184526 [debug] [MainThread]: On master: Close
+[0m20:59:11.185187 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:59:11.185690 [debug] [MainThread]: Connection 'model.petrophysics_dbt_flux.stg_cliente' was properly closed.
+[0m20:59:11.186218 [info ] [MainThread]: 
+[0m20:59:11.186842 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.26 seconds (0.26s).
+[0m20:59:11.187901 [debug] [MainThread]: Command end result
+[0m20:59:11.236056 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m20:59:11.238515 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m20:59:11.247731 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/run_results.json
+[0m20:59:11.248347 [info ] [MainThread]: 
+[0m20:59:11.249332 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:59:11.250469 [info ] [MainThread]: 
+[0m20:59:11.251246 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m20:59:11.253557 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.7164062, "process_in_blocks": "0", "process_kernel_time": 0.301384, "process_mem_max_rss": "162108", "process_out_blocks": "3360", "process_user_time": 3.514478}
+[0m20:59:11.254718 [debug] [MainThread]: Command `dbt run` succeeded at 20:59:11.254504 after 1.72 seconds
+[0m20:59:11.255509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76dff697b1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76dff2f60990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76dff20966d0>]}
+[0m20:59:11.256373 [debug] [MainThread]: Flushing usage events
+[0m20:59:12.134635 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:41:48.871126 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc07171e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc07163810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc07171710>]}
+
+
+============================== 21:41:48.875307 | dc3e0c99-cd2a-4187-a535-abce3a66c646 ==============================
+[0m21:41:48.875307 [info ] [MainThread]: Running with dbt=1.11.8
+[0m21:41:48.876589 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'profiles_dir': '/home/wolf/.dbt', 'invocation_command': 'dbt run --select stg_cliente', 'static_parser': 'True', 'quiet': 'False', 'log_cache_events': 'False', 'empty': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error': 'None', 'introspect': 'True', 'cache_selected_only': 'False', 'use_colors': 'True', 'version_check': 'True', 'printer_width': '80', 'target_path': 'None', 'fail_fast': 'False', 'no_print': 'None', 'debug': 'False', 'log_format': 'default', 'log_path': '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'indirect_selection': 'eager'}
+[0m21:41:49.246123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dc3e0c99-cd2a-4187-a535-abce3a66c646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc013efc10>]}
+[0m21:41:49.378371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dc3e0c99-cd2a-4187-a535-abce3a66c646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc0a379910>]}
+[0m21:41:49.382581 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m21:41:49.582940 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m21:41:49.823347 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:41:49.824363 [debug] [MainThread]: Partial parsing: updated file: petrophysics_dbt_flux://models/staging/stg_cliente.sql
+[0m21:41:50.400180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dc3e0c99-cd2a-4187-a535-abce3a66c646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc010f85d0>]}
+[0m21:41:50.562762 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m21:41:50.567823 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m21:41:50.583995 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dc3e0c99-cd2a-4187-a535-abce3a66c646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc00ee7790>]}
+[0m21:41:50.585042 [info ] [MainThread]: Found 6 seeds, 8 models, 475 macros
+[0m21:41:50.585737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dc3e0c99-cd2a-4187-a535-abce3a66c646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc01095510>]}
+[0m21:41:50.588571 [info ] [MainThread]: 
+[0m21:41:50.589356 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:41:50.590513 [info ] [MainThread]: 
+[0m21:41:50.591861 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:41:50.593523 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m21:41:50.668036 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m21:41:50.669283 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m21:41:50.670420 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:41:50.699092 [debug] [ThreadPool]: SQL status: OK in 0.029 seconds
+[0m21:41:50.701263 [debug] [ThreadPool]: On list_dev: Close
+[0m21:41:50.702493 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m21:41:50.703285 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m21:41:50.714156 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:41:50.714913 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m21:41:50.715512 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:41:50.717139 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m21:41:50.719680 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:41:50.721376 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m21:41:50.723062 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:41:50.724406 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:41:50.725680 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m21:41:50.727714 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:41:50.730425 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m21:41:50.731635 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:41:50.732334 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m21:41:50.733967 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:41:50.735271 [debug] [ThreadPool]: On create_dev_main: Close
+[0m21:41:50.752347 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dev_main, now list_dev_main)
+[0m21:41:50.762912 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m21:41:50.763634 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m21:41:50.764535 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:41:50.766041 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:41:50.766922 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m21:41:50.767522 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m21:41:50.771997 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m21:41:50.774072 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m21:41:50.775099 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m21:41:50.775898 [debug] [ThreadPool]: On list_dev_main: Close
+[0m21:41:50.778841 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dc3e0c99-cd2a-4187-a535-abce3a66c646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc00ec2290>]}
+[0m21:41:50.779706 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:41:50.780322 [debug] [MainThread]: On master: BEGIN
+[0m21:41:50.780898 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:41:50.782102 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:41:50.783284 [debug] [MainThread]: On master: COMMIT
+[0m21:41:50.784138 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:41:50.784787 [debug] [MainThread]: On master: COMMIT
+[0m21:41:50.785725 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:41:50.786361 [debug] [MainThread]: On master: Close
+[0m21:41:50.789414 [debug] [Thread-1 (]: Began running node model.petrophysics_dbt_flux.stg_cliente
+[0m21:41:50.790891 [info ] [Thread-1 (]: 1 of 1 START sql view model main.stg_cliente ................................... [RUN]
+[0m21:41:50.792079 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main, now model.petrophysics_dbt_flux.stg_cliente)
+[0m21:41:50.793265 [debug] [Thread-1 (]: Began compiling node model.petrophysics_dbt_flux.stg_cliente
+[0m21:41:50.808500 [debug] [Thread-1 (]: Writing injected SQL for node "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:41:50.809433 [debug] [Thread-1 (]: Began executing node model.petrophysics_dbt_flux.stg_cliente
+[0m21:41:50.857556 [debug] [Thread-1 (]: Writing runtime sql for node "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:41:50.858691 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:41:50.859541 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: BEGIN
+[0m21:41:50.860802 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:41:50.862346 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:41:50.863092 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:41:50.863847 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+
+  
+  create view "dev"."main"."stg_cliente__dbt_tmp" as (
+    with source as (
+    select *
+    from "dev"."main"."cliente"
+),
+
+renamed as (
+    select
+        cliente_id,
+        trim("Nome Cliente") as nome_cliente_raw,
+        trim("E-mail") as email_raw,
+        trim("Dt Cadastro") as dt_cadastro_raw,
+        trim("Status Cliente") as status_cliente_raw,
+        trim("Segmento") as segmento_raw,
+        trim("Canal Preferido") as canal_preferido_raw,
+        "Score Fidelidade" as score_fidelidade
+    from source
+),
+
+standardized as (
+    select
+        cliente_id,
+        regexp_replace(nome_cliente_raw, '\s+', ' ', 'g') as nome_cliente,
+        lower(email_raw) as email,
+        coalesce(
+            try_strptime(dt_cadastro_raw, '%Y-%m-%d'),
+            try_strptime(dt_cadastro_raw, '%d/%m/%Y'),
+            try_strptime(dt_cadastro_raw, '%Y/%m/%d')
+        )::date as dt_cadastro,
+        case
+            when lower(status_cliente_raw) in ('ativo', 'a') then 'ativo'
+            when lower(status_cliente_raw) in ('inativo', 'i') then 'inativo'
+            else lower(status_cliente_raw)
+        end as status_cliente,
+        case
+            when lower(segmento_raw) in ('pf', 'pessoa fisica') then 'pf'
+            when lower(segmento_raw) = 'b2b' then 'b2b'
+            when segmento_raw = '' then null
+            else lower(segmento_raw)
+        end as segmento,
+        case
+            when lower(canal_preferido_raw) = 'site' then 'site'
+            when lower(canal_preferido_raw) = 'app' then 'app'
+            when lower(canal_preferido_raw) = 'marketplace' then 'marketplace'
+            when canal_preferido_raw = '' then null
+            else lower(canal_preferido_raw)
+        end as canal_preferido,
+        score_fidelidade
+    from renamed
+)
+
+select
+    cliente_id,
+    nome_cliente,
+    email,
+    dt_cadastro,
+    status_cliente,
+    segmento,
+    canal_preferido,
+    score_fidelidade
+from standardized
+  );
+
+[0m21:41:50.866209 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:41:50.875603 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:41:50.876465 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+alter view "dev"."main"."stg_cliente" rename to "stg_cliente__dbt_backup"
+[0m21:41:50.878252 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:41:50.882937 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:41:50.883660 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+alter view "dev"."main"."stg_cliente__dbt_tmp" rename to "stg_cliente"
+[0m21:41:50.884881 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:41:50.905232 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: COMMIT
+[0m21:41:50.906008 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:41:50.906836 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: COMMIT
+[0m21:41:50.911919 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:41:50.920456 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:41:50.921223 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+
+      drop view if exists "dev"."main"."stg_cliente__dbt_backup" cascade
+    
+[0m21:41:50.925267 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:41:50.929249 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: Close
+[0m21:41:50.931827 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dc3e0c99-cd2a-4187-a535-abce3a66c646', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc070a0290>]}
+[0m21:41:50.933139 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.stg_cliente .............................. [[32mOK[0m in 0.14s]
+[0m21:41:50.935101 [debug] [Thread-1 (]: Finished running node model.petrophysics_dbt_flux.stg_cliente
+[0m21:41:50.937746 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:41:50.938489 [debug] [MainThread]: On master: BEGIN
+[0m21:41:50.939132 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:41:50.940480 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:41:50.941173 [debug] [MainThread]: On master: COMMIT
+[0m21:41:50.941927 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:41:50.942910 [debug] [MainThread]: On master: COMMIT
+[0m21:41:50.944032 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:41:50.945331 [debug] [MainThread]: On master: Close
+[0m21:41:50.946853 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:41:50.948135 [debug] [MainThread]: Connection 'model.petrophysics_dbt_flux.stg_cliente' was properly closed.
+[0m21:41:50.948889 [info ] [MainThread]: 
+[0m21:41:50.949901 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.36 seconds (0.36s).
+[0m21:41:50.951694 [debug] [MainThread]: Command end result
+[0m21:41:51.008197 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m21:41:51.011041 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m21:41:51.020589 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/run_results.json
+[0m21:41:51.021231 [info ] [MainThread]: 
+[0m21:41:51.022188 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:41:51.023535 [info ] [MainThread]: 
+[0m21:41:51.024826 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m21:41:51.027330 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.2479012, "process_in_blocks": "0", "process_kernel_time": 0.309958, "process_mem_max_rss": "161808", "process_out_blocks": "3408", "process_user_time": 4.57439}
+[0m21:41:51.028896 [debug] [MainThread]: Command `dbt run` succeeded at 21:41:51.028637 after 2.25 seconds
+[0m21:41:51.030199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc08191690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc0ba774d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc0761f8d0>]}
+[0m21:41:51.031558 [debug] [MainThread]: Flushing usage events
+[0m21:41:51.038464 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:49:35.312570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d465015c450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d465015e510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d465015e650>]}
+
+
+============================== 21:49:35.316977 | 749978d5-df37-47a6-9ce3-d75ea5cdb13a ==============================
+[0m21:49:35.316977 [info ] [MainThread]: Running with dbt=1.11.8
+[0m21:49:35.318275 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'debug': 'False', 'indirect_selection': 'eager', 'use_colors': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'fail_fast': 'False', 'warn_error': 'None', 'invocation_command': 'dbt run --select stg_categoria stg_cliente stg_endereco stg_produto stg_pedidos stg_item_pedido', 'quiet': 'False', 'profiles_dir': '/home/wolf/.dbt', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'empty': 'False', 'printer_width': '80', 'version_check': 'True', 'log_path': '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/logs'}
+[0m21:49:35.726844 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '749978d5-df37-47a6-9ce3-d75ea5cdb13a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4650083e10>]}
+[0m21:49:35.842195 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '749978d5-df37-47a6-9ce3-d75ea5cdb13a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d465317f710>]}
+[0m21:49:35.844664 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m21:49:36.044889 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m21:49:36.298373 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 6 files changed.
+[0m21:49:36.300490 [debug] [MainThread]: Partial parsing: updated file: petrophysics_dbt_flux://models/staging/stg_categoria.sql
+[0m21:49:36.302103 [debug] [MainThread]: Partial parsing: updated file: petrophysics_dbt_flux://models/staging/stg_item_pedido.sql
+[0m21:49:36.303927 [debug] [MainThread]: Partial parsing: updated file: petrophysics_dbt_flux://models/staging/stg_produto.sql
+[0m21:49:36.305657 [debug] [MainThread]: Partial parsing: updated file: petrophysics_dbt_flux://models/staging/stg_endereco.sql
+[0m21:49:36.307299 [debug] [MainThread]: Partial parsing: updated file: petrophysics_dbt_flux://models/staging/stg_cliente.sql
+[0m21:49:36.308859 [debug] [MainThread]: Partial parsing: updated file: petrophysics_dbt_flux://models/staging/stg_pedidos.sql
+[0m21:49:36.977572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '749978d5-df37-47a6-9ce3-d75ea5cdb13a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d464fe73e90>]}
+[0m21:49:37.139746 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m21:49:37.143896 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m21:49:37.157224 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '749978d5-df37-47a6-9ce3-d75ea5cdb13a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d464febc050>]}
+[0m21:49:37.158483 [info ] [MainThread]: Found 6 seeds, 8 models, 475 macros
+[0m21:49:37.159761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '749978d5-df37-47a6-9ce3-d75ea5cdb13a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4649b23310>]}
+[0m21:49:37.164122 [info ] [MainThread]: 
+[0m21:49:37.164940 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:49:37.166553 [info ] [MainThread]: 
+[0m21:49:37.168031 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:49:37.179401 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m21:49:37.249278 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m21:49:37.250505 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m21:49:37.251215 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:49:37.271871 [debug] [ThreadPool]: SQL status: OK in 0.021 seconds
+[0m21:49:37.274154 [debug] [ThreadPool]: On list_dev: Close
+[0m21:49:37.275490 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m21:49:37.276553 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m21:49:37.289249 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:49:37.290121 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m21:49:37.291252 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:49:37.293649 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m21:49:37.296519 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:49:37.297159 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m21:49:37.298141 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:49:37.298952 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:49:37.299523 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m21:49:37.300586 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:49:37.301927 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m21:49:37.302529 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:49:37.303065 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m21:49:37.304031 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:49:37.304666 [debug] [ThreadPool]: On create_dev_main: Close
+[0m21:49:37.309349 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dev_main, now list_dev_main)
+[0m21:49:37.323726 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m21:49:37.324915 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m21:49:37.325959 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:49:37.327559 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m21:49:37.328640 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m21:49:37.329822 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m21:49:37.335641 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m21:49:37.337805 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m21:49:37.339004 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m21:49:37.339643 [debug] [ThreadPool]: On list_dev_main: Close
+[0m21:49:37.344217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '749978d5-df37-47a6-9ce3-d75ea5cdb13a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4649d355d0>]}
+[0m21:49:37.345741 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:49:37.346810 [debug] [MainThread]: On master: BEGIN
+[0m21:49:37.347418 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:49:37.348571 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:49:37.349254 [debug] [MainThread]: On master: COMMIT
+[0m21:49:37.349902 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:49:37.350565 [debug] [MainThread]: On master: COMMIT
+[0m21:49:37.351529 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:49:37.352168 [debug] [MainThread]: On master: Close
+[0m21:49:37.356114 [debug] [Thread-1 (]: Began running node model.petrophysics_dbt_flux.stg_categoria
+[0m21:49:37.357849 [info ] [Thread-1 (]: 1 of 6 START sql view model main.stg_categoria ................................. [RUN]
+[0m21:49:37.359676 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main, now model.petrophysics_dbt_flux.stg_categoria)
+[0m21:49:37.361059 [debug] [Thread-1 (]: Began compiling node model.petrophysics_dbt_flux.stg_categoria
+[0m21:49:37.372850 [debug] [Thread-1 (]: Writing injected SQL for node "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:49:37.374358 [debug] [Thread-1 (]: Began executing node model.petrophysics_dbt_flux.stg_categoria
+[0m21:49:37.423950 [debug] [Thread-1 (]: Writing runtime sql for node "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:49:37.425010 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:49:37.425705 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: BEGIN
+[0m21:49:37.426335 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:49:37.428076 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:49:37.429463 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:49:37.430182 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_categoria"} */
+
+  
+  create view "dev"."main"."stg_categoria__dbt_tmp" as (
+    with source as (
+    select *
+    from "dev"."main"."categoria"
+),
+
+renamed as (
+    select
+        categoria_id,
+        trim(sigla) as sigla_raw,
+        trim("Nome Categoria") as nome_categoria_raw
+    from source
+),
+
+standardized as (
+    select
+        categoria_id,
+        upper(sigla_raw) as sigla_categoria,
+        regexp_replace(nome_categoria_raw, '\s+', ' ', 'g') as nome_categoria
+    from renamed
+)
+
+select
+    categoria_id,
+    sigla_categoria,
+    nome_categoria
+from standardized
+  );
+
+[0m21:49:37.432077 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.442241 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:49:37.443049 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_categoria"} */
+alter view "dev"."main"."stg_categoria__dbt_tmp" rename to "stg_categoria"
+[0m21:49:37.444430 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.463174 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: COMMIT
+[0m21:49:37.463960 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:49:37.464633 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: COMMIT
+[0m21:49:37.467966 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:49:37.476547 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:49:37.477299 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_categoria"} */
+
+      drop view if exists "dev"."main"."stg_categoria__dbt_backup" cascade
+    
+[0m21:49:37.478433 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:49:37.481823 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: Close
+[0m21:49:37.484193 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749978d5-df37-47a6-9ce3-d75ea5cdb13a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4649fc2290>]}
+[0m21:49:37.485290 [info ] [Thread-1 (]: 1 of 6 OK created sql view model main.stg_categoria ............................ [[32mOK[0m in 0.12s]
+[0m21:49:37.486635 [debug] [Thread-1 (]: Finished running node model.petrophysics_dbt_flux.stg_categoria
+[0m21:49:37.487543 [debug] [Thread-1 (]: Began running node model.petrophysics_dbt_flux.stg_cliente
+[0m21:49:37.488573 [info ] [Thread-1 (]: 2 of 6 START sql view model main.stg_cliente ................................... [RUN]
+[0m21:49:37.489706 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.petrophysics_dbt_flux.stg_categoria, now model.petrophysics_dbt_flux.stg_cliente)
+[0m21:49:37.490619 [debug] [Thread-1 (]: Began compiling node model.petrophysics_dbt_flux.stg_cliente
+[0m21:49:37.494882 [debug] [Thread-1 (]: Writing injected SQL for node "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:49:37.495871 [debug] [Thread-1 (]: Began executing node model.petrophysics_dbt_flux.stg_cliente
+[0m21:49:37.501459 [debug] [Thread-1 (]: Writing runtime sql for node "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:49:37.502579 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:49:37.503272 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: BEGIN
+[0m21:49:37.503953 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:49:37.505120 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.505983 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:49:37.506799 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+
+  
+  create view "dev"."main"."stg_cliente__dbt_tmp" as (
+    with 
+source as (
+    select *
+    from "dev"."main"."cliente"
+),
+
+renamed as (
+    select
+        cliente_id,
+        trim("Nome Cliente") as nome_cliente_raw,
+        trim("E-mail") as email_raw,
+        trim("Dt Cadastro") as dt_cadastro_raw,
+        trim("Status Cliente") as status_cliente_raw,
+        trim("Segmento") as segmento_raw,
+        trim("Canal Preferido") as canal_preferido_raw,
+        "Score Fidelidade" as score_fidelidade
+    from source
+),
+
+standardized as (
+    select
+        cliente_id,
+        regexp_replace(nome_cliente_raw, '\s+', ' ', 'g') as nome_cliente,
+        lower(email_raw) as email,
+        coalesce(
+            try_strptime(dt_cadastro_raw, '%Y-%m-%d'),
+            try_strptime(dt_cadastro_raw, '%d/%m/%Y'),
+            try_strptime(dt_cadastro_raw, '%Y/%m/%d')
+        )::date as dt_cadastro,
+        case
+            when lower(status_cliente_raw) in ('ativo', 'a') then 'ativo'
+            when lower(status_cliente_raw) in ('inativo', 'i') then 'inativo'
+            else lower(status_cliente_raw)
+        end as status_cliente,
+        case
+            when lower(segmento_raw) in ('pf', 'pessoa fisica') then 'pf'
+            when lower(segmento_raw) = 'b2b' then 'b2b'
+            when segmento_raw = '' then null
+            else lower(segmento_raw)
+        end as segmento,
+        case
+            when lower(canal_preferido_raw) = 'site' then 'site'
+            when lower(canal_preferido_raw) = 'app' then 'app'
+            when lower(canal_preferido_raw) = 'marketplace' then 'marketplace'
+            when canal_preferido_raw = '' then null
+            else lower(canal_preferido_raw)
+        end as canal_preferido,
+        score_fidelidade
+    from renamed
+)
+
+select
+    cliente_id,
+    nome_cliente,
+    email,
+    dt_cadastro,
+    status_cliente,
+    segmento,
+    canal_preferido,
+    score_fidelidade
+from standardized
+  );
+
+[0m21:49:37.509215 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:49:37.514107 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:49:37.514866 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+alter view "dev"."main"."stg_cliente" rename to "stg_cliente__dbt_backup"
+[0m21:49:37.516253 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.521262 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:49:37.522574 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+alter view "dev"."main"."stg_cliente__dbt_tmp" rename to "stg_cliente"
+[0m21:49:37.524199 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.530801 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: COMMIT
+[0m21:49:37.531557 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:49:37.532182 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: COMMIT
+[0m21:49:37.535527 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:49:37.542829 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:49:37.543838 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+
+      drop view if exists "dev"."main"."stg_cliente__dbt_backup" cascade
+    
+[0m21:49:37.547043 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:49:37.549012 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: Close
+[0m21:49:37.550215 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749978d5-df37-47a6-9ce3-d75ea5cdb13a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4648786c90>]}
+[0m21:49:37.551391 [info ] [Thread-1 (]: 2 of 6 OK created sql view model main.stg_cliente .............................. [[32mOK[0m in 0.06s]
+[0m21:49:37.552551 [debug] [Thread-1 (]: Finished running node model.petrophysics_dbt_flux.stg_cliente
+[0m21:49:37.553546 [debug] [Thread-1 (]: Began running node model.petrophysics_dbt_flux.stg_endereco
+[0m21:49:37.554489 [info ] [Thread-1 (]: 3 of 6 START sql view model main.stg_endereco .................................. [RUN]
+[0m21:49:37.555542 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.petrophysics_dbt_flux.stg_cliente, now model.petrophysics_dbt_flux.stg_endereco)
+[0m21:49:37.556549 [debug] [Thread-1 (]: Began compiling node model.petrophysics_dbt_flux.stg_endereco
+[0m21:49:37.562739 [debug] [Thread-1 (]: Writing injected SQL for node "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:49:37.563667 [debug] [Thread-1 (]: Began executing node model.petrophysics_dbt_flux.stg_endereco
+[0m21:49:37.569204 [debug] [Thread-1 (]: Writing runtime sql for node "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:49:37.570172 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:49:37.570830 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: BEGIN
+[0m21:49:37.571537 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:49:37.572798 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.573713 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:49:37.575249 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_endereco"} */
+
+  
+  create view "dev"."main"."stg_endereco__dbt_tmp" as (
+    with source as (
+    select *
+    from "dev"."main"."endereco"
+),
+
+renamed as (
+    select
+        endereco_id,
+        cliente_id,
+        trim("UF") as uf_raw,
+        trim("Nome Cidade") as cidade_raw,
+        trim("CEP") as cep_raw,
+        trim("Logradouro") as logradouro_raw,
+        trim(bairro) as bairro_raw,
+        numero,
+        trim(complemento) as complemento_raw
+    from source
+),
+
+standardized as (
+    select
+        endereco_id,
+        cliente_id,
+        upper(uf_raw) as uf,
+        lower(regexp_replace(cidade_raw, '\s+', ' ', 'g')) as cidade,
+        cep_raw as cep,
+        regexp_replace(logradouro_raw, '\s+', ' ', 'g') as logradouro,
+        regexp_replace(bairro_raw, '\s+', ' ', 'g') as bairro,
+        numero,
+        nullif(regexp_replace(complemento_raw, '\s+', ' ', 'g'), '') as complemento
+    from renamed
+)
+
+select
+    endereco_id,
+    cliente_id,
+    uf,
+    cidade,
+    cep,
+    logradouro,
+    bairro,
+    numero,
+    complemento
+from standardized
+  );
+
+[0m21:49:37.577818 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.582558 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:49:37.583531 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_endereco"} */
+alter view "dev"."main"."stg_endereco__dbt_tmp" rename to "stg_endereco"
+[0m21:49:37.585164 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.589767 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: COMMIT
+[0m21:49:37.590574 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:49:37.591226 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: COMMIT
+[0m21:49:37.594193 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:49:37.598175 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:49:37.598944 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_endereco"} */
+
+      drop view if exists "dev"."main"."stg_endereco__dbt_backup" cascade
+    
+[0m21:49:37.600144 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:49:37.602178 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: Close
+[0m21:49:37.603172 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749978d5-df37-47a6-9ce3-d75ea5cdb13a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4648787a50>]}
+[0m21:49:37.604254 [info ] [Thread-1 (]: 3 of 6 OK created sql view model main.stg_endereco ............................. [[32mOK[0m in 0.05s]
+[0m21:49:37.605603 [debug] [Thread-1 (]: Finished running node model.petrophysics_dbt_flux.stg_endereco
+[0m21:49:37.606611 [debug] [Thread-1 (]: Began running node model.petrophysics_dbt_flux.stg_item_pedido
+[0m21:49:37.607711 [info ] [Thread-1 (]: 4 of 6 START sql view model main.stg_item_pedido ............................... [RUN]
+[0m21:49:37.608778 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.petrophysics_dbt_flux.stg_endereco, now model.petrophysics_dbt_flux.stg_item_pedido)
+[0m21:49:37.609707 [debug] [Thread-1 (]: Began compiling node model.petrophysics_dbt_flux.stg_item_pedido
+[0m21:49:37.613847 [debug] [Thread-1 (]: Writing injected SQL for node "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:49:37.614753 [debug] [Thread-1 (]: Began executing node model.petrophysics_dbt_flux.stg_item_pedido
+[0m21:49:37.620495 [debug] [Thread-1 (]: Writing runtime sql for node "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:49:37.621603 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:49:37.622638 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: BEGIN
+[0m21:49:37.623315 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:49:37.624512 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.625254 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:49:37.626021 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_item_pedido"} */
+
+  
+  create view "dev"."main"."stg_item_pedido__dbt_tmp" as (
+    with source as (
+    select *
+    from "dev"."main"."item_pedido"
+),
+
+renamed as (
+    select
+        pedido_id,
+        item_seq,
+        codigo_produto as produto_id,
+        "Qtde" as quantidade_raw,
+        "Preco Unit." as preco_unitario_raw,
+        "Desc Item" as valor_desconto_item_raw,
+        "Subtotal Item" as subtotal_item_raw
+    from source
+),
+
+standardized as (
+    select
+        pedido_id,
+        item_seq,
+        produto_id,
+        cast(quantidade_raw as integer) as quantidade,
+        cast(preco_unitario_raw as decimal(18,2)) as preco_unitario,
+        cast(valor_desconto_item_raw as decimal(18,2)) as valor_desconto_item,
+        cast(subtotal_item_raw as decimal(18,2)) as subtotal_item
+    from renamed
+),
+
+enriched as (
+    select
+        pedido_id,
+        item_seq,
+        produto_id,
+        quantidade,
+        preco_unitario,
+        valor_desconto_item,
+        subtotal_item,
+        cast(quantidade * preco_unitario as decimal(18,2)) as valor_bruto_item
+    from standardized
+)
+
+select
+    pedido_id,
+    item_seq,
+    produto_id,
+    quantidade,
+    preco_unitario,
+    valor_desconto_item,
+    subtotal_item,
+    valor_bruto_item
+from enriched
+  );
+
+[0m21:49:37.628832 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:49:37.634173 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:49:37.634958 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_item_pedido"} */
+alter view "dev"."main"."stg_item_pedido__dbt_tmp" rename to "stg_item_pedido"
+[0m21:49:37.636185 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.638682 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: COMMIT
+[0m21:49:37.639543 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:49:37.640203 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: COMMIT
+[0m21:49:37.643196 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:49:37.647055 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:49:37.647833 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_item_pedido"} */
+
+      drop view if exists "dev"."main"."stg_item_pedido__dbt_backup" cascade
+    
+[0m21:49:37.648970 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:49:37.651002 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: Close
+[0m21:49:37.651990 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749978d5-df37-47a6-9ce3-d75ea5cdb13a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4648755010>]}
+[0m21:49:37.653152 [info ] [Thread-1 (]: 4 of 6 OK created sql view model main.stg_item_pedido .......................... [[32mOK[0m in 0.04s]
+[0m21:49:37.654684 [debug] [Thread-1 (]: Finished running node model.petrophysics_dbt_flux.stg_item_pedido
+[0m21:49:37.655904 [debug] [Thread-1 (]: Began running node model.petrophysics_dbt_flux.stg_pedidos
+[0m21:49:37.656809 [info ] [Thread-1 (]: 5 of 6 START sql view model main.stg_pedidos ................................... [RUN]
+[0m21:49:37.657837 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.petrophysics_dbt_flux.stg_item_pedido, now model.petrophysics_dbt_flux.stg_pedidos)
+[0m21:49:37.658779 [debug] [Thread-1 (]: Began compiling node model.petrophysics_dbt_flux.stg_pedidos
+[0m21:49:37.663113 [debug] [Thread-1 (]: Writing injected SQL for node "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:49:37.664071 [debug] [Thread-1 (]: Began executing node model.petrophysics_dbt_flux.stg_pedidos
+[0m21:49:37.672387 [debug] [Thread-1 (]: Writing runtime sql for node "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:49:37.673454 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:49:37.674164 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: BEGIN
+[0m21:49:37.674837 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:49:37.676187 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.677767 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:49:37.678974 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_pedidos"} */
+
+  
+  create view "dev"."main"."stg_pedidos__dbt_tmp" as (
+    with source as (
+    select *
+    from "dev"."main"."pedidos"
+),
+
+renamed as (
+    select
+        pedido_id,
+        cliente_id,
+        trim("DtPedido") as dt_pedido_raw,
+        trim("Status Pedido") as status_pedido_raw,
+        trim("Forma Pgto") as forma_pagamento_raw,
+        vl_frete as valor_frete_raw,
+        vl_desconto_pedido as valor_desconto_pedido_raw,
+        trim(cupom_codigo) as cupom_codigo_raw,
+        trim("Canal Venda") as canal_venda_raw,
+        trim(uf_entrega) as uf_entrega_raw,
+        trim("CidadeEntrega") as cidade_entrega_raw
+    from source
+),
+
+standardized as (
+    select
+        pedido_id,
+        cliente_id,
+        coalesce(
+            try_strptime(dt_pedido_raw, '%Y-%m-%d %H:%M:%S'),
+            try_strptime(dt_pedido_raw, '%Y-%m-%d'),
+            try_strptime(dt_pedido_raw, '%d/%m/%Y'),
+            try_strptime(dt_pedido_raw, '%Y/%m/%d')
+        ) as dt_pedido,
+        case
+            when lower(status_pedido_raw) = 'concluido' then 'concluido'
+            when lower(status_pedido_raw) = 'cancelado' then 'cancelado'
+            when lower(status_pedido_raw) = 'entregue' then 'entregue'
+            when lower(status_pedido_raw) = 'faturado' then 'faturado'
+            when lower(status_pedido_raw) = 'em transporte' then 'em_transporte'
+            when lower(status_pedido_raw) = 'em separacao' then 'em_separacao'
+            else regexp_replace(lower(status_pedido_raw), '\s+', '_', 'g')
+        end as status_pedido,
+        case
+            when lower(forma_pagamento_raw) = 'pix' then 'pix'
+            when lower(forma_pagamento_raw) = 'boleto' then 'boleto'
+            when lower(forma_pagamento_raw) in ('cartao_credito', 'cartao de credito') then 'cartao_credito'
+            when lower(forma_pagamento_raw) = 'cartao_debito' then 'cartao_debito'
+            else regexp_replace(lower(forma_pagamento_raw), '\s+', '_', 'g')
+        end as forma_pagamento,
+        cast(valor_frete_raw as decimal(18,2)) as valor_frete,
+        cast(valor_desconto_pedido_raw as decimal(18,2)) as valor_desconto_pedido,
+        nullif(upper(cupom_codigo_raw), '') as cupom_codigo,
+        lower(canal_venda_raw) as canal_venda,
+        upper(uf_entrega_raw) as uf_entrega,
+        nullif(lower(regexp_replace(cidade_entrega_raw, '\s+', ' ', 'g')), '') as cidade_entrega
+    from renamed
+)
+
+select
+    pedido_id,
+    cliente_id,
+    dt_pedido,
+    status_pedido,
+    forma_pagamento,
+    valor_frete,
+    valor_desconto_pedido,
+    cupom_codigo,
+    canal_venda,
+    uf_entrega,
+    cidade_entrega
+from standardized
+  );
+
+[0m21:49:37.682983 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:49:37.687921 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:49:37.689259 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_pedidos"} */
+alter view "dev"."main"."stg_pedidos__dbt_tmp" rename to "stg_pedidos"
+[0m21:49:37.691319 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.694321 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: COMMIT
+[0m21:49:37.695142 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:49:37.695820 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: COMMIT
+[0m21:49:37.699030 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:49:37.702949 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:49:37.703625 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_pedidos"} */
+
+      drop view if exists "dev"."main"."stg_pedidos__dbt_backup" cascade
+    
+[0m21:49:37.704871 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:49:37.708200 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: Close
+[0m21:49:37.709831 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749978d5-df37-47a6-9ce3-d75ea5cdb13a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d46487e3a50>]}
+[0m21:49:37.711140 [info ] [Thread-1 (]: 5 of 6 OK created sql view model main.stg_pedidos .............................. [[32mOK[0m in 0.05s]
+[0m21:49:37.712269 [debug] [Thread-1 (]: Finished running node model.petrophysics_dbt_flux.stg_pedidos
+[0m21:49:37.713297 [debug] [Thread-1 (]: Began running node model.petrophysics_dbt_flux.stg_produto
+[0m21:49:37.714236 [info ] [Thread-1 (]: 6 of 6 START sql view model main.stg_produto ................................... [RUN]
+[0m21:49:37.715080 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.petrophysics_dbt_flux.stg_pedidos, now model.petrophysics_dbt_flux.stg_produto)
+[0m21:49:37.716109 [debug] [Thread-1 (]: Began compiling node model.petrophysics_dbt_flux.stg_produto
+[0m21:49:37.720159 [debug] [Thread-1 (]: Writing injected SQL for node "model.petrophysics_dbt_flux.stg_produto"
+[0m21:49:37.721024 [debug] [Thread-1 (]: Began executing node model.petrophysics_dbt_flux.stg_produto
+[0m21:49:37.727760 [debug] [Thread-1 (]: Writing runtime sql for node "model.petrophysics_dbt_flux.stg_produto"
+[0m21:49:37.728739 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_produto"
+[0m21:49:37.729499 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: BEGIN
+[0m21:49:37.730111 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:49:37.731189 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.731944 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_produto"
+[0m21:49:37.732740 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_produto"} */
+
+  
+  create view "dev"."main"."stg_produto__dbt_tmp" as (
+    with source as (
+    select *
+    from "dev"."main"."produto"
+),
+
+renamed as (
+    select
+        produto_id,
+        trim("Nome Produto") as nome_produto_raw,
+        trim("ativo?") as status_produto_raw,
+        "Qtd Estoque" as quantidade_estoque,
+        "Preco Atual" as preco_atual_raw,
+        categoria_id,
+        trim("Marca") as marca_raw,
+        trim("Dt Cadastro") as dt_cadastro_raw
+    from source
+),
+
+standardized as (
+    select
+        produto_id,
+        regexp_replace(nome_produto_raw, '\s+', ' ', 'g') as nome_produto,
+        case
+            when lower(status_produto_raw) in ('ativo', 'a') then 'ativo'
+            when lower(status_produto_raw) = 'inativo' then 'inativo'
+            else lower(status_produto_raw)
+        end as status_produto,
+        cast(quantidade_estoque as integer) as quantidade_estoque,
+        cast(preco_atual_raw as decimal(18,2)) as preco_atual,
+        categoria_id,
+        regexp_replace(marca_raw, '\s+', ' ', 'g') as marca,
+        coalesce(
+            try_strptime(dt_cadastro_raw, '%Y-%m-%d'),
+            try_strptime(dt_cadastro_raw, '%d/%m/%Y'),
+            try_strptime(dt_cadastro_raw, '%Y/%m/%d')
+        )::date as dt_cadastro
+    from renamed
+)
+
+select
+    produto_id,
+    nome_produto,
+    status_produto,
+    quantidade_estoque,
+    preco_atual,
+    categoria_id,
+    marca,
+    dt_cadastro
+from standardized
+  );
+
+[0m21:49:37.735000 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.740101 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_produto"
+[0m21:49:37.740848 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_produto"} */
+alter view "dev"."main"."stg_produto__dbt_tmp" rename to "stg_produto"
+[0m21:49:37.742118 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.744543 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: COMMIT
+[0m21:49:37.745499 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_produto"
+[0m21:49:37.746483 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: COMMIT
+[0m21:49:37.749418 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:49:37.753543 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_produto"
+[0m21:49:37.754295 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_produto"} */
+
+      drop view if exists "dev"."main"."stg_produto__dbt_backup" cascade
+    
+[0m21:49:37.755602 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:49:37.757645 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: Close
+[0m21:49:37.758713 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749978d5-df37-47a6-9ce3-d75ea5cdb13a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d46487cd0d0>]}
+[0m21:49:37.759784 [info ] [Thread-1 (]: 6 of 6 OK created sql view model main.stg_produto .............................. [[32mOK[0m in 0.04s]
+[0m21:49:37.761321 [debug] [Thread-1 (]: Finished running node model.petrophysics_dbt_flux.stg_produto
+[0m21:49:37.763326 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:49:37.764048 [debug] [MainThread]: On master: BEGIN
+[0m21:49:37.764666 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:49:37.765765 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:49:37.766457 [debug] [MainThread]: On master: COMMIT
+[0m21:49:37.767113 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:49:37.767877 [debug] [MainThread]: On master: COMMIT
+[0m21:49:37.768807 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:49:37.769473 [debug] [MainThread]: On master: Close
+[0m21:49:37.770307 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:49:37.770951 [debug] [MainThread]: Connection 'model.petrophysics_dbt_flux.stg_produto' was properly closed.
+[0m21:49:37.771650 [info ] [MainThread]: 
+[0m21:49:37.772551 [info ] [MainThread]: Finished running 6 view models in 0 hours 0 minutes and 0.60 seconds (0.60s).
+[0m21:49:37.775316 [debug] [MainThread]: Command end result
+[0m21:49:37.828244 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m21:49:37.830774 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m21:49:37.840221 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/run_results.json
+[0m21:49:37.840956 [info ] [MainThread]: 
+[0m21:49:37.841912 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:49:37.843196 [info ] [MainThread]: 
+[0m21:49:37.844741 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6
+[0m21:49:37.847221 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.6319907, "process_in_blocks": "0", "process_kernel_time": 0.316354, "process_mem_max_rss": "162588", "process_out_blocks": "3704", "process_user_time": 4.737327}
+[0m21:49:37.848397 [debug] [MainThread]: Command `dbt run` succeeded at 21:49:37.848096 after 2.63 seconds
+[0m21:49:37.849287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4654877690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d464fff9010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d4650152a90>]}
+[0m21:49:37.850336 [debug] [MainThread]: Flushing usage events
+[0m21:49:37.854292 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:51:36.682107 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e024e79b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e024f9f850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e024f9cd10>]}
+
+
+============================== 21:51:36.686158 | 460753df-4377-4cc1-a133-8d6a74343fda ==============================
+[0m21:51:36.686158 [info ] [MainThread]: Running with dbt=1.11.8
+[0m21:51:36.687125 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --select staging', 'use_colors': 'True', 'log_path': '/home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/logs', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'write_json': 'True', 'debug': 'False', 'empty': 'False', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'log_cache_events': 'False', 'printer_width': '80', 'fail_fast': 'False', 'indirect_selection': 'eager', 'quiet': 'False', 'warn_error': 'None', 'log_format': 'default', 'partial_parse': 'True', 'version_check': 'True', 'profiles_dir': '/home/wolf/.dbt'}
+[0m21:51:36.999784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '460753df-4377-4cc1-a133-8d6a74343fda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e024f35350>]}
+[0m21:51:37.091012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '460753df-4377-4cc1-a133-8d6a74343fda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e01ef81dd0>]}
+[0m21:51:37.093290 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m21:51:37.235776 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m21:51:37.401952 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:51:37.402558 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:51:37.403024 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:51:37.455637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '460753df-4377-4cc1-a133-8d6a74343fda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e024d7bc50>]}
+[0m21:51:37.663266 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m21:51:37.665627 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m21:51:37.675623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '460753df-4377-4cc1-a133-8d6a74343fda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e01ed19410>]}
+[0m21:51:37.676401 [info ] [MainThread]: Found 6 seeds, 8 models, 475 macros
+[0m21:51:37.677183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '460753df-4377-4cc1-a133-8d6a74343fda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e01ed07e10>]}
+[0m21:51:37.680777 [info ] [MainThread]: 
+[0m21:51:37.681589 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:51:37.682124 [info ] [MainThread]: 
+[0m21:51:37.682900 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:51:37.690110 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m21:51:37.746654 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m21:51:37.747304 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m21:51:37.747865 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:51:37.766520 [debug] [ThreadPool]: SQL status: OK in 0.019 seconds
+[0m21:51:37.768366 [debug] [ThreadPool]: On list_dev: Close
+[0m21:51:37.769375 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m21:51:37.770086 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m21:51:37.779283 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:51:37.779918 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m21:51:37.780466 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:51:37.782569 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m21:51:37.784515 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:51:37.785054 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m21:51:37.785876 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:51:37.786435 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:51:37.786968 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m21:51:37.787822 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:51:37.789117 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m21:51:37.789662 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:51:37.790159 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m21:51:37.791104 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:51:37.791876 [debug] [ThreadPool]: On create_dev_main: Close
+[0m21:51:37.795001 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dev_main, now list_dev_main)
+[0m21:51:37.803178 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m21:51:37.803807 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m21:51:37.804334 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:51:37.805415 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:51:37.805961 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m21:51:37.806487 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m21:51:37.810654 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m21:51:37.812800 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m21:51:37.813799 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m21:51:37.814347 [debug] [ThreadPool]: On list_dev_main: Close
+[0m21:51:37.818537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '460753df-4377-4cc1-a133-8d6a74343fda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e024d78f50>]}
+[0m21:51:37.819772 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:51:37.820421 [debug] [MainThread]: On master: BEGIN
+[0m21:51:37.821044 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:51:37.822060 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:51:37.822674 [debug] [MainThread]: On master: COMMIT
+[0m21:51:37.823194 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:51:37.823708 [debug] [MainThread]: On master: COMMIT
+[0m21:51:37.824513 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:51:37.825049 [debug] [MainThread]: On master: Close
+[0m21:51:37.828004 [debug] [Thread-1 (]: Began running node model.petrophysics_dbt_flux.stg_categoria
+[0m21:51:37.828817 [info ] [Thread-1 (]: 1 of 6 START sql view model main.stg_categoria ................................. [RUN]
+[0m21:51:37.829628 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main, now model.petrophysics_dbt_flux.stg_categoria)
+[0m21:51:37.830389 [debug] [Thread-1 (]: Began compiling node model.petrophysics_dbt_flux.stg_categoria
+[0m21:51:37.842613 [debug] [Thread-1 (]: Writing injected SQL for node "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:51:37.843547 [debug] [Thread-1 (]: Began executing node model.petrophysics_dbt_flux.stg_categoria
+[0m21:51:37.885346 [debug] [Thread-1 (]: Writing runtime sql for node "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:51:37.886348 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:51:37.886981 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: BEGIN
+[0m21:51:37.887526 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:37.888581 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:37.889159 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:51:37.889742 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_categoria"} */
+
+  
+  create view "dev"."main"."stg_categoria__dbt_tmp" as (
+    with source as (
+    select *
+    from "dev"."main"."categoria"
+),
+
+renamed as (
+    select
+        categoria_id,
+        trim(sigla) as sigla_raw,
+        trim("Nome Categoria") as nome_categoria_raw
+    from source
+),
+
+standardized as (
+    select
+        categoria_id,
+        upper(sigla_raw) as sigla_categoria,
+        regexp_replace(nome_categoria_raw, '\s+', ' ', 'g') as nome_categoria
+    from renamed
+)
+
+select
+    categoria_id,
+    sigla_categoria,
+    nome_categoria
+from standardized
+  );
+
+[0m21:51:37.891128 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:37.899972 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:51:37.900629 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_categoria"} */
+alter view "dev"."main"."stg_categoria" rename to "stg_categoria__dbt_backup"
+[0m21:51:37.901771 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:37.906201 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:51:37.906816 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_categoria"} */
+alter view "dev"."main"."stg_categoria__dbt_tmp" rename to "stg_categoria"
+[0m21:51:37.907904 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:37.927863 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: COMMIT
+[0m21:51:37.928528 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:51:37.929075 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: COMMIT
+[0m21:51:37.932103 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:51:37.939934 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_categoria"
+[0m21:51:37.940593 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_categoria"} */
+
+      drop view if exists "dev"."main"."stg_categoria__dbt_backup" cascade
+    
+[0m21:51:37.943656 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:51:37.947140 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_categoria: Close
+[0m21:51:37.949302 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '460753df-4377-4cc1-a133-8d6a74343fda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e01e050d90>]}
+[0m21:51:37.950248 [info ] [Thread-1 (]: 1 of 6 OK created sql view model main.stg_categoria ............................ [[32mOK[0m in 0.12s]
+[0m21:51:37.951283 [debug] [Thread-1 (]: Finished running node model.petrophysics_dbt_flux.stg_categoria
+[0m21:51:37.952081 [debug] [Thread-1 (]: Began running node model.petrophysics_dbt_flux.stg_cliente
+[0m21:51:37.953101 [info ] [Thread-1 (]: 2 of 6 START sql view model main.stg_cliente ................................... [RUN]
+[0m21:51:37.954138 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.petrophysics_dbt_flux.stg_categoria, now model.petrophysics_dbt_flux.stg_cliente)
+[0m21:51:37.954857 [debug] [Thread-1 (]: Began compiling node model.petrophysics_dbt_flux.stg_cliente
+[0m21:51:37.959123 [debug] [Thread-1 (]: Writing injected SQL for node "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:51:37.960021 [debug] [Thread-1 (]: Began executing node model.petrophysics_dbt_flux.stg_cliente
+[0m21:51:37.965313 [debug] [Thread-1 (]: Writing runtime sql for node "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:51:37.966363 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:51:37.967030 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: BEGIN
+[0m21:51:37.967590 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:37.968625 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:37.969375 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:51:37.970091 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+
+  
+  create view "dev"."main"."stg_cliente__dbt_tmp" as (
+    with 
+source as (
+    select *
+    from "dev"."main"."cliente"
+),
+
+renamed as (
+    select
+        cliente_id,
+        trim("Nome Cliente") as nome_cliente_raw,
+        trim("E-mail") as email_raw,
+        trim("Dt Cadastro") as dt_cadastro_raw,
+        trim("Status Cliente") as status_cliente_raw,
+        trim("Segmento") as segmento_raw,
+        trim("Canal Preferido") as canal_preferido_raw,
+        "Score Fidelidade" as score_fidelidade
+    from source
+),
+
+standardized as (
+    select
+        cliente_id,
+        regexp_replace(nome_cliente_raw, '\s+', ' ', 'g') as nome_cliente,
+        lower(email_raw) as email,
+        coalesce(
+            try_strptime(dt_cadastro_raw, '%Y-%m-%d'),
+            try_strptime(dt_cadastro_raw, '%d/%m/%Y'),
+            try_strptime(dt_cadastro_raw, '%Y/%m/%d')
+        )::date as dt_cadastro,
+        case
+            when lower(status_cliente_raw) in ('ativo', 'a') then 'ativo'
+            when lower(status_cliente_raw) in ('inativo', 'i') then 'inativo'
+            else lower(status_cliente_raw)
+        end as status_cliente,
+        case
+            when lower(segmento_raw) in ('pf', 'pessoa fisica') then 'pf'
+            when lower(segmento_raw) = 'b2b' then 'b2b'
+            when segmento_raw = '' then null
+            else lower(segmento_raw)
+        end as segmento,
+        case
+            when lower(canal_preferido_raw) = 'site' then 'site'
+            when lower(canal_preferido_raw) = 'app' then 'app'
+            when lower(canal_preferido_raw) = 'marketplace' then 'marketplace'
+            when canal_preferido_raw = '' then null
+            else lower(canal_preferido_raw)
+        end as canal_preferido,
+        score_fidelidade
+    from renamed
+)
+
+select
+    cliente_id,
+    nome_cliente,
+    email,
+    dt_cadastro,
+    status_cliente,
+    segmento,
+    canal_preferido,
+    score_fidelidade
+from standardized
+  );
+
+[0m21:51:37.972418 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:37.976809 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:51:37.977537 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+alter view "dev"."main"."stg_cliente" rename to "stg_cliente__dbt_backup"
+[0m21:51:37.978888 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:37.985331 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:51:37.986010 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+alter view "dev"."main"."stg_cliente__dbt_tmp" rename to "stg_cliente"
+[0m21:51:37.987132 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:37.989476 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: COMMIT
+[0m21:51:37.990076 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:51:37.990652 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: COMMIT
+[0m21:51:37.993841 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:51:37.997648 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_cliente"
+[0m21:51:37.998263 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_cliente"} */
+
+      drop view if exists "dev"."main"."stg_cliente__dbt_backup" cascade
+    
+[0m21:51:38.001164 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:51:38.003237 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_cliente: Close
+[0m21:51:38.004131 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '460753df-4377-4cc1-a133-8d6a74343fda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e01c762490>]}
+[0m21:51:38.005029 [info ] [Thread-1 (]: 2 of 6 OK created sql view model main.stg_cliente .............................. [[32mOK[0m in 0.05s]
+[0m21:51:38.006028 [debug] [Thread-1 (]: Finished running node model.petrophysics_dbt_flux.stg_cliente
+[0m21:51:38.006955 [debug] [Thread-1 (]: Began running node model.petrophysics_dbt_flux.stg_endereco
+[0m21:51:38.008323 [info ] [Thread-1 (]: 3 of 6 START sql view model main.stg_endereco .................................. [RUN]
+[0m21:51:38.009406 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.petrophysics_dbt_flux.stg_cliente, now model.petrophysics_dbt_flux.stg_endereco)
+[0m21:51:38.010119 [debug] [Thread-1 (]: Began compiling node model.petrophysics_dbt_flux.stg_endereco
+[0m21:51:38.014052 [debug] [Thread-1 (]: Writing injected SQL for node "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:51:38.014905 [debug] [Thread-1 (]: Began executing node model.petrophysics_dbt_flux.stg_endereco
+[0m21:51:38.020192 [debug] [Thread-1 (]: Writing runtime sql for node "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:51:38.021095 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:51:38.021662 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: BEGIN
+[0m21:51:38.022185 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:38.023139 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:38.023724 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:51:38.024315 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_endereco"} */
+
+  
+  create view "dev"."main"."stg_endereco__dbt_tmp" as (
+    with source as (
+    select *
+    from "dev"."main"."endereco"
+),
+
+renamed as (
+    select
+        endereco_id,
+        cliente_id,
+        trim("UF") as uf_raw,
+        trim("Nome Cidade") as cidade_raw,
+        trim("CEP") as cep_raw,
+        trim("Logradouro") as logradouro_raw,
+        trim(bairro) as bairro_raw,
+        numero,
+        trim(complemento) as complemento_raw
+    from source
+),
+
+standardized as (
+    select
+        endereco_id,
+        cliente_id,
+        upper(uf_raw) as uf,
+        lower(regexp_replace(cidade_raw, '\s+', ' ', 'g')) as cidade,
+        cep_raw as cep,
+        regexp_replace(logradouro_raw, '\s+', ' ', 'g') as logradouro,
+        regexp_replace(bairro_raw, '\s+', ' ', 'g') as bairro,
+        numero,
+        nullif(regexp_replace(complemento_raw, '\s+', ' ', 'g'), '') as complemento
+    from renamed
+)
+
+select
+    endereco_id,
+    cliente_id,
+    uf,
+    cidade,
+    cep,
+    logradouro,
+    bairro,
+    numero,
+    complemento
+from standardized
+  );
+
+[0m21:51:38.026452 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:38.031309 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:51:38.032086 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_endereco"} */
+alter view "dev"."main"."stg_endereco" rename to "stg_endereco__dbt_backup"
+[0m21:51:38.033435 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:38.037746 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:51:38.038366 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_endereco"} */
+alter view "dev"."main"."stg_endereco__dbt_tmp" rename to "stg_endereco"
+[0m21:51:38.039533 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:51:38.041837 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: COMMIT
+[0m21:51:38.042522 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:51:38.043080 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: COMMIT
+[0m21:51:38.046112 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:51:38.049866 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_endereco"
+[0m21:51:38.050499 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_endereco"} */
+
+      drop view if exists "dev"."main"."stg_endereco__dbt_backup" cascade
+    
+[0m21:51:38.053786 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:51:38.055894 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_endereco: Close
+[0m21:51:38.056738 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '460753df-4377-4cc1-a133-8d6a74343fda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e01c763250>]}
+[0m21:51:38.057629 [info ] [Thread-1 (]: 3 of 6 OK created sql view model main.stg_endereco ............................. [[32mOK[0m in 0.05s]
+[0m21:51:38.058551 [debug] [Thread-1 (]: Finished running node model.petrophysics_dbt_flux.stg_endereco
+[0m21:51:38.059305 [debug] [Thread-1 (]: Began running node model.petrophysics_dbt_flux.stg_item_pedido
+[0m21:51:38.060292 [info ] [Thread-1 (]: 4 of 6 START sql view model main.stg_item_pedido ............................... [RUN]
+[0m21:51:38.061517 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.petrophysics_dbt_flux.stg_endereco, now model.petrophysics_dbt_flux.stg_item_pedido)
+[0m21:51:38.062657 [debug] [Thread-1 (]: Began compiling node model.petrophysics_dbt_flux.stg_item_pedido
+[0m21:51:38.066968 [debug] [Thread-1 (]: Writing injected SQL for node "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:51:38.068012 [debug] [Thread-1 (]: Began executing node model.petrophysics_dbt_flux.stg_item_pedido
+[0m21:51:38.074569 [debug] [Thread-1 (]: Writing runtime sql for node "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:51:38.075555 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:51:38.076117 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: BEGIN
+[0m21:51:38.076646 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:38.077660 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:38.078457 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:51:38.079230 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_item_pedido"} */
+
+  
+  create view "dev"."main"."stg_item_pedido__dbt_tmp" as (
+    with source as (
+    select *
+    from "dev"."main"."item_pedido"
+),
+
+renamed as (
+    select
+        pedido_id,
+        item_seq,
+        codigo_produto as produto_id,
+        "Qtde" as quantidade_raw,
+        "Preco Unit." as preco_unitario_raw,
+        "Desc Item" as valor_desconto_item_raw,
+        "Subtotal Item" as subtotal_item_raw
+    from source
+),
+
+standardized as (
+    select
+        pedido_id,
+        item_seq,
+        produto_id,
+        cast(quantidade_raw as integer) as quantidade,
+        cast(preco_unitario_raw as decimal(18,2)) as preco_unitario,
+        cast(valor_desconto_item_raw as decimal(18,2)) as valor_desconto_item,
+        cast(subtotal_item_raw as decimal(18,2)) as subtotal_item
+    from renamed
+),
+
+enriched as (
+    select
+        pedido_id,
+        item_seq,
+        produto_id,
+        quantidade,
+        preco_unitario,
+        valor_desconto_item,
+        subtotal_item,
+        cast(quantidade * preco_unitario as decimal(18,2)) as valor_bruto_item
+    from standardized
+)
+
+select
+    pedido_id,
+    item_seq,
+    produto_id,
+    quantidade,
+    preco_unitario,
+    valor_desconto_item,
+    subtotal_item,
+    valor_bruto_item
+from enriched
+  );
+
+[0m21:51:38.081157 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:38.085545 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:51:38.086151 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_item_pedido"} */
+alter view "dev"."main"."stg_item_pedido" rename to "stg_item_pedido__dbt_backup"
+[0m21:51:38.087307 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:38.091522 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:51:38.092105 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_item_pedido"} */
+alter view "dev"."main"."stg_item_pedido__dbt_tmp" rename to "stg_item_pedido"
+[0m21:51:38.093180 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:51:38.098050 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: COMMIT
+[0m21:51:38.098680 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:51:38.099217 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: COMMIT
+[0m21:51:38.102512 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:51:38.106159 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_item_pedido"
+[0m21:51:38.106740 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_item_pedido"} */
+
+      drop view if exists "dev"."main"."stg_item_pedido__dbt_backup" cascade
+    
+[0m21:51:38.109605 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:51:38.111416 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_item_pedido: Close
+[0m21:51:38.112230 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '460753df-4377-4cc1-a133-8d6a74343fda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e01c784790>]}
+[0m21:51:38.113099 [info ] [Thread-1 (]: 4 of 6 OK created sql view model main.stg_item_pedido .......................... [[32mOK[0m in 0.05s]
+[0m21:51:38.114036 [debug] [Thread-1 (]: Finished running node model.petrophysics_dbt_flux.stg_item_pedido
+[0m21:51:38.114872 [debug] [Thread-1 (]: Began running node model.petrophysics_dbt_flux.stg_pedidos
+[0m21:51:38.115948 [info ] [Thread-1 (]: 5 of 6 START sql view model main.stg_pedidos ................................... [RUN]
+[0m21:51:38.116946 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.petrophysics_dbt_flux.stg_item_pedido, now model.petrophysics_dbt_flux.stg_pedidos)
+[0m21:51:38.118086 [debug] [Thread-1 (]: Began compiling node model.petrophysics_dbt_flux.stg_pedidos
+[0m21:51:38.123072 [debug] [Thread-1 (]: Writing injected SQL for node "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:51:38.124003 [debug] [Thread-1 (]: Began executing node model.petrophysics_dbt_flux.stg_pedidos
+[0m21:51:38.129206 [debug] [Thread-1 (]: Writing runtime sql for node "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:51:38.130111 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:51:38.130708 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: BEGIN
+[0m21:51:38.131258 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:38.132243 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:38.132879 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:51:38.133699 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_pedidos"} */
+
+  
+  create view "dev"."main"."stg_pedidos__dbt_tmp" as (
+    with source as (
+    select *
+    from "dev"."main"."pedidos"
+),
+
+renamed as (
+    select
+        pedido_id,
+        cliente_id,
+        trim("DtPedido") as dt_pedido_raw,
+        trim("Status Pedido") as status_pedido_raw,
+        trim("Forma Pgto") as forma_pagamento_raw,
+        vl_frete as valor_frete_raw,
+        vl_desconto_pedido as valor_desconto_pedido_raw,
+        trim(cupom_codigo) as cupom_codigo_raw,
+        trim("Canal Venda") as canal_venda_raw,
+        trim(uf_entrega) as uf_entrega_raw,
+        trim("CidadeEntrega") as cidade_entrega_raw
+    from source
+),
+
+standardized as (
+    select
+        pedido_id,
+        cliente_id,
+        coalesce(
+            try_strptime(dt_pedido_raw, '%Y-%m-%d %H:%M:%S'),
+            try_strptime(dt_pedido_raw, '%Y-%m-%d'),
+            try_strptime(dt_pedido_raw, '%d/%m/%Y'),
+            try_strptime(dt_pedido_raw, '%Y/%m/%d')
+        ) as dt_pedido,
+        case
+            when lower(status_pedido_raw) = 'concluido' then 'concluido'
+            when lower(status_pedido_raw) = 'cancelado' then 'cancelado'
+            when lower(status_pedido_raw) = 'entregue' then 'entregue'
+            when lower(status_pedido_raw) = 'faturado' then 'faturado'
+            when lower(status_pedido_raw) = 'em transporte' then 'em_transporte'
+            when lower(status_pedido_raw) = 'em separacao' then 'em_separacao'
+            else regexp_replace(lower(status_pedido_raw), '\s+', '_', 'g')
+        end as status_pedido,
+        case
+            when lower(forma_pagamento_raw) = 'pix' then 'pix'
+            when lower(forma_pagamento_raw) = 'boleto' then 'boleto'
+            when lower(forma_pagamento_raw) in ('cartao_credito', 'cartao de credito') then 'cartao_credito'
+            when lower(forma_pagamento_raw) = 'cartao_debito' then 'cartao_debito'
+            else regexp_replace(lower(forma_pagamento_raw), '\s+', '_', 'g')
+        end as forma_pagamento,
+        cast(valor_frete_raw as decimal(18,2)) as valor_frete,
+        cast(valor_desconto_pedido_raw as decimal(18,2)) as valor_desconto_pedido,
+        nullif(upper(cupom_codigo_raw), '') as cupom_codigo,
+        lower(canal_venda_raw) as canal_venda,
+        upper(uf_entrega_raw) as uf_entrega,
+        nullif(lower(regexp_replace(cidade_entrega_raw, '\s+', ' ', 'g')), '') as cidade_entrega
+    from renamed
+)
+
+select
+    pedido_id,
+    cliente_id,
+    dt_pedido,
+    status_pedido,
+    forma_pagamento,
+    valor_frete,
+    valor_desconto_pedido,
+    cupom_codigo,
+    canal_venda,
+    uf_entrega,
+    cidade_entrega
+from standardized
+  );
+
+[0m21:51:38.136263 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:51:38.140633 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:51:38.141251 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_pedidos"} */
+alter view "dev"."main"."stg_pedidos" rename to "stg_pedidos__dbt_backup"
+[0m21:51:38.142345 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:51:38.146693 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:51:38.147327 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_pedidos"} */
+alter view "dev"."main"."stg_pedidos__dbt_tmp" rename to "stg_pedidos"
+[0m21:51:38.148543 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:38.151024 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: COMMIT
+[0m21:51:38.151675 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:51:38.152237 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: COMMIT
+[0m21:51:38.155657 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:51:38.159454 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_pedidos"
+[0m21:51:38.160061 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_pedidos"} */
+
+      drop view if exists "dev"."main"."stg_pedidos__dbt_backup" cascade
+    
+[0m21:51:38.163060 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:51:38.165122 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_pedidos: Close
+[0m21:51:38.165948 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '460753df-4377-4cc1-a133-8d6a74343fda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e01e022a90>]}
+[0m21:51:38.166830 [info ] [Thread-1 (]: 5 of 6 OK created sql view model main.stg_pedidos .............................. [[32mOK[0m in 0.05s]
+[0m21:51:38.167744 [debug] [Thread-1 (]: Finished running node model.petrophysics_dbt_flux.stg_pedidos
+[0m21:51:38.168574 [debug] [Thread-1 (]: Began running node model.petrophysics_dbt_flux.stg_produto
+[0m21:51:38.169525 [info ] [Thread-1 (]: 6 of 6 START sql view model main.stg_produto ................................... [RUN]
+[0m21:51:38.170489 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.petrophysics_dbt_flux.stg_pedidos, now model.petrophysics_dbt_flux.stg_produto)
+[0m21:51:38.171676 [debug] [Thread-1 (]: Began compiling node model.petrophysics_dbt_flux.stg_produto
+[0m21:51:38.176143 [debug] [Thread-1 (]: Writing injected SQL for node "model.petrophysics_dbt_flux.stg_produto"
+[0m21:51:38.177045 [debug] [Thread-1 (]: Began executing node model.petrophysics_dbt_flux.stg_produto
+[0m21:51:38.182818 [debug] [Thread-1 (]: Writing runtime sql for node "model.petrophysics_dbt_flux.stg_produto"
+[0m21:51:38.183872 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_produto"
+[0m21:51:38.184530 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: BEGIN
+[0m21:51:38.185081 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:38.186058 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:38.186655 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_produto"
+[0m21:51:38.187291 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_produto"} */
+
+  
+  create view "dev"."main"."stg_produto__dbt_tmp" as (
+    with source as (
+    select *
+    from "dev"."main"."produto"
+),
+
+renamed as (
+    select
+        produto_id,
+        trim("Nome Produto") as nome_produto_raw,
+        trim("ativo?") as status_produto_raw,
+        "Qtd Estoque" as quantidade_estoque,
+        "Preco Atual" as preco_atual_raw,
+        categoria_id,
+        trim("Marca") as marca_raw,
+        trim("Dt Cadastro") as dt_cadastro_raw
+    from source
+),
+
+standardized as (
+    select
+        produto_id,
+        regexp_replace(nome_produto_raw, '\s+', ' ', 'g') as nome_produto,
+        case
+            when lower(status_produto_raw) in ('ativo', 'a') then 'ativo'
+            when lower(status_produto_raw) = 'inativo' then 'inativo'
+            else lower(status_produto_raw)
+        end as status_produto,
+        cast(quantidade_estoque as integer) as quantidade_estoque,
+        cast(preco_atual_raw as decimal(18,2)) as preco_atual,
+        categoria_id,
+        regexp_replace(marca_raw, '\s+', ' ', 'g') as marca,
+        coalesce(
+            try_strptime(dt_cadastro_raw, '%Y-%m-%d'),
+            try_strptime(dt_cadastro_raw, '%d/%m/%Y'),
+            try_strptime(dt_cadastro_raw, '%Y/%m/%d')
+        )::date as dt_cadastro
+    from renamed
+)
+
+select
+    produto_id,
+    nome_produto,
+    status_produto,
+    quantidade_estoque,
+    preco_atual,
+    categoria_id,
+    marca,
+    dt_cadastro
+from standardized
+  );
+
+[0m21:51:38.189226 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:38.193556 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_produto"
+[0m21:51:38.194174 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_produto"} */
+alter view "dev"."main"."stg_produto" rename to "stg_produto__dbt_backup"
+[0m21:51:38.195350 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:38.199759 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_produto"
+[0m21:51:38.200410 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_produto"} */
+alter view "dev"."main"."stg_produto__dbt_tmp" rename to "stg_produto"
+[0m21:51:38.201669 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:51:38.203998 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: COMMIT
+[0m21:51:38.204607 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_produto"
+[0m21:51:38.205169 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: COMMIT
+[0m21:51:38.208529 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:51:38.214465 [debug] [Thread-1 (]: Using duckdb connection "model.petrophysics_dbt_flux.stg_produto"
+[0m21:51:38.215141 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "petrophysics_dbt_flux", "target_name": "dev", "node_id": "model.petrophysics_dbt_flux.stg_produto"} */
+
+      drop view if exists "dev"."main"."stg_produto__dbt_backup" cascade
+    
+[0m21:51:38.217899 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:51:38.219764 [debug] [Thread-1 (]: On model.petrophysics_dbt_flux.stg_produto: Close
+[0m21:51:38.220568 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '460753df-4377-4cc1-a133-8d6a74343fda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e01c7d5010>]}
+[0m21:51:38.221421 [info ] [Thread-1 (]: 6 of 6 OK created sql view model main.stg_produto .............................. [[32mOK[0m in 0.05s]
+[0m21:51:38.222310 [debug] [Thread-1 (]: Finished running node model.petrophysics_dbt_flux.stg_produto
+[0m21:51:38.224110 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:51:38.224763 [debug] [MainThread]: On master: BEGIN
+[0m21:51:38.225561 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:51:38.226700 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:51:38.227316 [debug] [MainThread]: On master: COMMIT
+[0m21:51:38.227892 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:51:38.228416 [debug] [MainThread]: On master: COMMIT
+[0m21:51:38.229263 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:51:38.229873 [debug] [MainThread]: On master: Close
+[0m21:51:38.230570 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:51:38.231067 [debug] [MainThread]: Connection 'model.petrophysics_dbt_flux.stg_produto' was properly closed.
+[0m21:51:38.231860 [info ] [MainThread]: 
+[0m21:51:38.232607 [info ] [MainThread]: Finished running 6 view models in 0 hours 0 minutes and 0.55 seconds (0.55s).
+[0m21:51:38.234828 [debug] [MainThread]: Command end result
+[0m21:51:38.276757 [debug] [MainThread]: Wrote artifact WritableManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/manifest.json
+[0m21:51:38.279116 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/semantic_manifest.json
+[0m21:51:38.287435 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/wolf/Documentos/desenvolvimento/ciencia-dados-freestyle/petrophysics_dbt_flux/target/run_results.json
+[0m21:51:38.287972 [info ] [MainThread]: 
+[0m21:51:38.288648 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:51:38.289232 [info ] [MainThread]: 
+[0m21:51:38.289883 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6
+[0m21:51:38.291784 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.6894139, "process_in_blocks": "0", "process_kernel_time": 0.288603, "process_mem_max_rss": "160136", "process_out_blocks": "2656", "process_user_time": 3.471227}
+[0m21:51:38.293061 [debug] [MainThread]: Command `dbt run` succeeded at 21:51:38.292743 after 1.69 seconds
+[0m21:51:38.294052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e025220510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e02977b1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73e029bbccd0>]}
+[0m21:51:38.294735 [debug] [MainThread]: Flushing usage events
+[0m21:51:39.290250 [debug] [MainThread]: An error was encountered while trying to flush usage events
