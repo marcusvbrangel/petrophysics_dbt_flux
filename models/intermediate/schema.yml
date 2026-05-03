@@ -2,77 +2,163 @@ version: 2
 
 models:
   - name: int_clientes_com_endereco
-    description: "Cliente enriquecido com endereco."
+    description: "Modelo intermediario com grão de um cliente por linha, enriquecendo o cadastro com o endereco principal."
     columns:
       - name: cliente_id
+        description: "Identificador unico do cliente."
         data_tests:
           - unique
           - not_null
+      - name: nome_cliente
+        description: "Nome do cliente."
       - name: email
+        description: "E-mail do cliente."
         data_tests:
           - unique
           - not_null
+      - name: dt_cadastro
+        description: "Data de cadastro do cliente."
+      - name: status_cliente
+        description: "Status do cliente."
+      - name: segmento
+        description: "Segmento do cliente."
+      - name: canal_preferido
+        description: "Canal preferido do cliente."
+      - name: score_fidelidade
+        description: "Score de fidelidade do cliente."
       - name: endereco_id
+        description: "Identificador unico do endereco principal."
         data_tests:
           - unique
           - not_null
       - name: uf
+        description: "UF do endereco do cliente."
         data_tests:
           - not_null
+      - name: cidade
+        description: "Cidade do endereco do cliente."
+      - name: cep
+        description: "CEP do endereco do cliente."
+      - name: logradouro
+        description: "Logradouro do endereco do cliente."
+      - name: bairro
+        description: "Bairro do endereco do cliente."
+      - name: numero
+        description: "Numero do endereco do cliente."
+      - name: complemento
+        description: "Complemento do endereco do cliente."
 
   - name: int_produtos_com_categoria
-    description: "Produto enriquecido com categoria."
+    description: "Modelo intermediario com grão de um produto por linha, enriquecendo o cadastro com dados da categoria."
     columns:
       - name: produto_id
+        description: "Identificador unico do produto."
         data_tests:
           - unique
           - not_null
+      - name: nome_produto
+        description: "Nome do produto."
+      - name: status_produto
+        description: "Status do produto."
+      - name: quantidade_estoque
+        description: "Quantidade atual em estoque."
+      - name: preco_atual
+        description: "Preco atual do produto."
       - name: categoria_id
+        description: "Identificador da categoria."
         data_tests:
           - not_null
+      - name: sigla_categoria
+        description: "Sigla da categoria."
       - name: nome_categoria
+        description: "Nome descritivo da categoria."
         data_tests:
           - not_null
+      - name: marca
+        description: "Marca do produto."
+      - name: dt_cadastro
+        description: "Data de cadastro do produto."
       - name: valor_estoque_atual
+        description: "Valor financeiro do estoque atual do produto."
         data_tests:
           - not_null
 
   - name: int_itens_pedido_enriquecidos
-    description: "Item de pedido enriquecido com contexto de pedido e produto."
+    description: "Modelo intermediario com grão de um item de pedido por linha, combinando contexto de pedido, produto e categoria."
     columns:
       - name: pedido_id
+        description: "Identificador do pedido."
         data_tests:
           - not_null
       - name: item_seq
+        description: "Sequencia do item no pedido."
         data_tests:
           - not_null
       - name: cliente_id
-        data_tests:
-          - not_null
-      - name: produto_id
+        description: "Identificador do cliente associado ao pedido."
         data_tests:
           - not_null
       - name: dt_pedido
+        description: "Data e hora do pedido."
+        data_tests:
+          - not_null
+      - name: status_pedido
+        description: "Status do pedido."
+      - name: forma_pagamento
+        description: "Forma de pagamento do pedido."
+      - name: canal_venda
+        description: "Canal de venda do pedido."
+      - name: uf_entrega
+        description: "UF de entrega do pedido."
+      - name: cidade_entrega
+        description: "Cidade de entrega do pedido."
+      - name: cupom_codigo
+        description: "Cupom aplicado ao pedido."
+      - name: produto_id
+        description: "Identificador do produto vendido."
         data_tests:
           - not_null
       - name: nome_produto
+        description: "Nome do produto vendido."
         data_tests:
           - not_null
+      - name: status_produto
+        description: "Status do produto."
+      - name: categoria_id
+        description: "Identificador da categoria do produto."
+      - name: sigla_categoria
+        description: "Sigla da categoria do produto."
       - name: nome_categoria
+        description: "Nome da categoria do produto."
         data_tests:
           - not_null
+      - name: marca
+        description: "Marca do produto."
+      - name: quantidade
+        description: "Quantidade vendida no item."
+      - name: preco_unitario
+        description: "Preco unitario bruto do item."
+      - name: valor_bruto_item
+        description: "Valor bruto do item."
+      - name: valor_desconto_item
+        description: "Valor de desconto do item."
       - name: subtotal_item
+        description: "Valor liquido do item."
         data_tests:
           - not_null
+      - name: preco_unitario_liquido
+        description: "Preco unitario liquido do item."
 
   - name: int_pedidos_enriquecidos
-    description: "Pedido enriquecido com cliente, endereco e agregacoes de itens."
+    description: "Modelo intermediario com grão de um pedido por linha, juntando cliente, endereco e agregacoes de itens."
     columns:
       - name: pedido_id
+        description: "Identificador unico do pedido."
         data_tests:
           - unique
           - not_null
       - name: cliente_id
+        description: "Identificador do cliente associado ao pedido."
         data_tests:
           - not_null
           - relationships:
@@ -80,20 +166,66 @@ models:
                 to: ref('int_clientes_com_endereco')
                 field: cliente_id
       - name: nome_cliente
+        description: "Nome do cliente."
         data_tests:
           - not_null
+      - name: email
+        description: "E-mail do cliente."
+      - name: status_cliente
+        description: "Status atual do cliente."
+      - name: segmento
+        description: "Segmento do cliente."
+      - name: canal_preferido
+        description: "Canal preferido do cliente."
+      - name: score_fidelidade
+        description: "Score de fidelidade do cliente."
       - name: dt_pedido
+        description: "Data e hora do pedido."
         data_tests:
           - not_null
       - name: status_pedido
+        description: "Status do pedido."
         data_tests:
           - not_null
+      - name: forma_pagamento
+        description: "Forma de pagamento do pedido."
+      - name: canal_venda
+        description: "Canal de venda do pedido."
+      - name: cupom_codigo
+        description: "Cupom aplicado ao pedido."
+      - name: uf_entrega
+        description: "UF de entrega do pedido."
+      - name: cidade_entrega
+        description: "Cidade de entrega do pedido."
+      - name: cep
+        description: "CEP do endereco do cliente."
+      - name: logradouro
+        description: "Logradouro do endereco do cliente."
+      - name: bairro
+        description: "Bairro do endereco do cliente."
+      - name: numero
+        description: "Numero do endereco do cliente."
+      - name: complemento
+        description: "Complemento do endereco do cliente."
+      - name: valor_frete
+        description: "Valor de frete do pedido."
+      - name: valor_desconto_pedido
+        description: "Valor de desconto aplicado ao pedido."
       - name: quantidade_itens_distintos
+        description: "Quantidade de linhas de itens associadas ao pedido."
         data_tests:
           - not_null
       - name: quantidade_total_itens
+        description: "Soma das quantidades vendidas no pedido."
         data_tests:
           - not_null
+      - name: valor_bruto_itens
+        description: "Soma do valor bruto dos itens do pedido."
+      - name: valor_desconto_itens
+        description: "Soma dos descontos dos itens do pedido."
+      - name: valor_liquido_itens
+        description: "Soma do valor liquido dos itens do pedido."
       - name: valor_total_pedido
+        description: "Valor total final do pedido considerando itens, frete e desconto do pedido."
         data_tests:
           - not_null

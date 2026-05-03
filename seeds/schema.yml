@@ -1,0 +1,118 @@
+version: 2
+
+seeds:
+  - name: cliente
+    description: "Base bruta de clientes utilizada para estudo do fluxo dbt."
+    columns:
+      - name: cliente_id
+        description: "Identificador bruto do cliente."
+      - name: Nome Cliente
+        description: "Nome do cliente como veio da origem."
+      - name: E-mail
+        description: "E-mail bruto do cliente."
+      - name: Dt Cadastro
+        description: "Data de cadastro em formatos mistos."
+      - name: Status Cliente
+        description: "Status bruto do cliente com variacoes de preenchimento."
+      - name: Segmento
+        description: "Segmento bruto do cliente."
+      - name: Canal Preferido
+        description: "Canal preferido bruto do cliente."
+      - name: Score Fidelidade
+        description: "Pontuacao de fidelidade bruta."
+
+  - name: endereco
+    description: "Base bruta de enderecos dos clientes."
+    columns:
+      - name: endereco_id
+        description: "Identificador bruto do endereco."
+      - name: cliente_id
+        description: "Identificador bruto do cliente dono do endereco."
+      - name: UF
+        description: "UF bruta com variacoes de caixa."
+      - name: Nome Cidade
+        description: "Cidade bruta do endereco."
+      - name: CEP
+        description: "CEP bruto do endereco."
+      - name: Logradouro
+        description: "Logradouro bruto do endereco."
+      - name: bairro
+        description: "Bairro bruto do endereco."
+      - name: numero
+        description: "Numero bruto do endereco."
+      - name: complemento
+        description: "Complemento bruto do endereco."
+
+  - name: categoria
+    description: "Base bruta de categorias de produtos."
+    columns:
+      - name: categoria_id
+        description: "Identificador bruto da categoria."
+      - name: sigla
+        description: "Sigla bruta da categoria."
+      - name: Nome Categoria
+        description: "Nome bruto da categoria."
+
+  - name: produto
+    description: "Base bruta de produtos com preco, estoque e categoria."
+    columns:
+      - name: produto_id
+        description: "Identificador bruto do produto."
+      - name: Nome Produto
+        description: "Nome bruto do produto."
+      - name: ativo?
+        description: "Status bruto do produto."
+      - name: Qtd Estoque
+        description: "Quantidade bruta em estoque."
+      - name: Preco Atual
+        description: "Preco bruto atual do produto."
+      - name: categoria_id
+        description: "Identificador bruto da categoria do produto."
+      - name: Marca
+        description: "Marca bruta do produto."
+      - name: Dt Cadastro
+        description: "Data bruta de cadastro do produto."
+
+  - name: pedidos
+    description: "Base bruta de pedidos com status, pagamento, canal e geografia de entrega."
+    columns:
+      - name: pedido_id
+        description: "Identificador bruto do pedido."
+      - name: cliente_id
+        description: "Identificador bruto do cliente."
+      - name: DtPedido
+        description: "Data bruta do pedido em formatos mistos."
+      - name: Status Pedido
+        description: "Status bruto do pedido."
+      - name: Forma Pgto
+        description: "Forma de pagamento bruta."
+      - name: vl_frete
+        description: "Valor bruto do frete."
+      - name: vl_desconto_pedido
+        description: "Valor bruto do desconto do pedido."
+      - name: cupom_codigo
+        description: "Cupom bruto do pedido."
+      - name: Canal Venda
+        description: "Canal de venda bruto."
+      - name: uf_entrega
+        description: "UF bruta da entrega."
+      - name: CidadeEntrega
+        description: "Cidade bruta da entrega."
+
+  - name: item_pedido
+    description: "Base bruta de itens de pedido no grao de item."
+    columns:
+      - name: pedido_id
+        description: "Identificador bruto do pedido."
+      - name: item_seq
+        description: "Sequencia bruta do item."
+      - name: codigo_produto
+        description: "Identificador bruto do produto."
+      - name: Qtde
+        description: "Quantidade bruta do item."
+      - name: Preco Unit.
+        description: "Preco unitario bruto do item."
+      - name: Desc Item
+        description: "Desconto bruto do item."
+      - name: Subtotal Item
+        description: "Subtotal bruto do item."

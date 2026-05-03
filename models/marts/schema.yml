@@ -2,141 +2,256 @@ version: 2
 
 models:
   - name: dim_clientes
-    description: "Dimensao final de clientes para consumo analitico."
+    description: "Dimensao final de clientes para consumo analitico. Consolida dados cadastrais, status, canal preferido e informacoes de endereco."
     columns:
       - name: cliente_id
+        description: "Identificador unico do cliente."
         data_tests:
           - unique
           - not_null
+      - name: nome_cliente
+        description: "Nome do cliente apos limpeza de espacos e padronizacao basica."
       - name: email
+        description: "Endereco de e-mail do cliente em minusculas."
         data_tests:
           - unique
           - not_null
       - name: dt_cadastro
+        description: "Data de cadastro do cliente."
         data_tests:
           - not_null
+      - name: mes_cadastro
+        description: "Primeiro dia do mes de cadastro, util para agregacoes mensais."
+      - name: ano_cadastro
+        description: "Ano de cadastro do cliente."
       - name: status_cliente
+        description: "Status padronizado do cliente."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['ativo', 'inativo']
+      - name: is_cliente_ativo
+        description: "Indicador booleano para clientes com status ativo."
       - name: segmento
+        description: "Segmento padronizado do cliente."
         data_tests:
           - accepted_values:
               arguments:
                 values: ['pf', 'b2b']
       - name: canal_preferido
+        description: "Canal preferido informado pelo cliente."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['site', 'app', 'marketplace']
+      - name: score_fidelidade
+        description: "Pontuacao de fidelidade do cliente."
       - name: faixa_score_fidelidade
+        description: "Classificacao derivada do score de fidelidade em alta, media ou baixa."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['alta', 'media', 'baixa']
+      - name: endereco_id
+        description: "Identificador do endereco principal do cliente."
       - name: uf_cadastro
+        description: "UF do endereco cadastral do cliente."
         data_tests:
           - not_null
+      - name: cidade_cadastro
+        description: "Cidade do endereco cadastral do cliente."
+      - name: cep
+        description: "CEP do endereco cadastral do cliente."
+      - name: logradouro
+        description: "Logradouro do endereco cadastral."
+      - name: bairro
+        description: "Bairro do endereco cadastral."
+      - name: numero
+        description: "Numero do endereco cadastral."
+      - name: complemento
+        description: "Complemento do endereco cadastral, quando informado."
 
   - name: dim_produtos
-    description: "Dimensao final de produtos com contexto de categoria."
+    description: "Dimensao final de produtos com contexto de categoria, estoque e faixas analiticas."
     columns:
       - name: produto_id
+        description: "Identificador unico do produto."
         data_tests:
           - unique
           - not_null
-      - name: categoria_id
-        data_tests:
-          - not_null
-      - name: nome_categoria
-        data_tests:
-          - not_null
+      - name: nome_produto
+        description: "Nome do produto apos limpeza e padronizacao de espacos."
       - name: status_produto
+        description: "Status padronizado do produto."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['ativo', 'inativo']
+      - name: is_produto_ativo
+        description: "Indicador booleano de produto ativo."
+      - name: quantidade_estoque
+        description: "Quantidade atual em estoque."
       - name: situacao_estoque
+        description: "Classificacao derivada da quantidade de estoque."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['sem_estoque', 'baixo_estoque', 'estoque_medio', 'estoque_alto']
+      - name: preco_atual
+        description: "Preco atual do produto."
+        data_tests:
+          - not_null
       - name: faixa_preco
+        description: "Classificacao do produto por faixa de preco."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['ate_99', '100_a_299', '300_a_599', '600_ou_mais']
-      - name: preco_atual
+      - name: categoria_id
+        description: "Identificador da categoria associada ao produto."
         data_tests:
           - not_null
+      - name: sigla_categoria
+        description: "Sigla da categoria do produto."
+      - name: nome_categoria
+        description: "Nome descritivo da categoria do produto."
+        data_tests:
+          - not_null
+      - name: marca
+        description: "Marca do produto."
+      - name: dt_cadastro
+        description: "Data de cadastro do produto."
+      - name: valor_estoque_atual
+        description: "Valor financeiro do estoque atual, calculado como quantidade_estoque * preco_atual."
 
   - name: fact_vendas
-    description: "Fato final de vendas no grao de item de pedido."
+    description: "Fato final de vendas no grao de item de pedido. Centraliza medidas de receita, desconto, produto, cliente, categoria, geografia e periodo."
     columns:
       - name: pedido_item_id
+        description: "Chave unica do item de pedido, composta por pedido_id e item_seq."
         data_tests:
           - unique
           - not_null
       - name: pedido_id
+        description: "Identificador do pedido."
         data_tests:
           - not_null
-      - name: cliente_id
-        data_tests:
-          - not_null
-          - relationships:
-              arguments:
-                to: ref('dim_clientes')
-                field: cliente_id
-      - name: produto_id
-        data_tests:
-          - not_null
-          - relationships:
-              arguments:
-                to: ref('dim_produtos')
-                field: produto_id
+      - name: item_seq
+        description: "Sequencia do item dentro do pedido."
       - name: dt_pedido
+        description: "Data e hora do pedido."
         data_tests:
           - not_null
+      - name: data_pedido
+        description: "Data do pedido sem componente de hora."
+      - name: mes_pedido
+        description: "Primeiro dia do mes do pedido."
+      - name: ano_pedido
+        description: "Ano do pedido."
+      - name: mes_numero_pedido
+        description: "Numero do mes do pedido."
       - name: status_pedido
+        description: "Status padronizado do pedido."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['cancelado', 'concluido', 'em_separacao', 'em_transporte', 'entregue', 'faturado']
+      - name: is_pedido_cancelado
+        description: "Indicador booleano de pedido cancelado."
       - name: forma_pagamento
+        description: "Forma de pagamento padronizada."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['boleto', 'cartao_credito', 'cartao_debito', 'pix']
       - name: canal_venda
+        description: "Canal de venda padronizado."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['site', 'app', 'marketplace']
+      - name: cupom_codigo
+        description: "Codigo do cupom aplicado ao pedido, quando existente."
+      - name: cliente_id
+        description: "Identificador do cliente associado ao pedido."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_clientes')
+                field: cliente_id
+      - name: nome_cliente
+        description: "Nome do cliente no momento da consulta analitica."
+      - name: status_cliente
+        description: "Status atual do cliente."
+      - name: segmento_cliente
+        description: "Segmento do cliente."
+      - name: faixa_score_fidelidade
+        description: "Faixa de fidelidade do cliente."
+      - name: uf_cadastro
+        description: "UF do endereco cadastral do cliente."
+      - name: cidade_cadastro
+        description: "Cidade do endereco cadastral do cliente."
+      - name: uf_entrega
+        description: "UF de entrega registrada no pedido."
+      - name: cidade_entrega
+        description: "Cidade de entrega registrada no pedido."
+      - name: produto_id
+        description: "Identificador do produto vendido."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_produtos')
+                field: produto_id
+      - name: nome_produto
+        description: "Nome do produto vendido."
+      - name: status_produto
+        description: "Status atual do produto."
+      - name: marca
+        description: "Marca do produto."
+      - name: categoria_id
+        description: "Identificador da categoria do produto."
+      - name: sigla_categoria
+        description: "Sigla da categoria do produto."
+      - name: nome_categoria
+        description: "Nome da categoria do produto."
       - name: quantidade
+        description: "Quantidade original registrada no item do pedido."
         data_tests:
           - not_null
       - name: quantidade_vendida
+        description: "Quantidade considerada para venda liquida; pedidos cancelados sao zerados."
         data_tests:
           - not_null
+      - name: preco_unitario
+        description: "Preco unitario bruto praticado no item."
+        data_tests:
+          - not_null
+      - name: preco_unitario_liquido
+        description: "Preco unitario liquido do item, calculado a partir do subtotal."
       - name: valor_bruto_item
+        description: "Valor bruto do item antes dos descontos."
         data_tests:
           - not_null
       - name: valor_desconto_item
+        description: "Valor de desconto aplicado ao item."
         data_tests:
           - not_null
       - name: valor_liquido_item
+        description: "Valor liquido do item apos descontos."
         data_tests:
           - not_null
       - name: receita_liquida_item
+        description: "Receita liquida considerada para analise; pedidos cancelados sao zerados."
         data_tests:
           - not_null

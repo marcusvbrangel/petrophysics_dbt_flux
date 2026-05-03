@@ -2,51 +2,61 @@ version: 2
 
 models:
   - name: stg_cliente
-    description: "Camada de staging para clientes."
+    description: "Camada de staging para clientes. Normaliza campos textuais, status, segmento, canal preferido e data de cadastro."
     columns:
       - name: cliente_id
+        description: "Identificador unico do cliente."
         data_tests:
           - unique
           - not_null
       - name: nome_cliente
+        description: "Nome do cliente com espacos normalizados."
         data_tests:
           - not_null
       - name: email
+        description: "E-mail do cliente convertido para minusculas."
         data_tests:
           - unique
           - not_null
       - name: dt_cadastro
+        description: "Data de cadastro convertida para o tipo date."
         data_tests:
           - not_null
       - name: status_cliente
+        description: "Status padronizado em ativo ou inativo."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['ativo', 'inativo']
       - name: segmento
+        description: "Segmento padronizado do cliente."
         data_tests:
           - accepted_values:
               arguments:
                 values: ['pf', 'b2b']
       - name: canal_preferido
+        description: "Canal preferido padronizado do cliente."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['site', 'app', 'marketplace']
       - name: score_fidelidade
+        description: "Pontuacao de fidelidade do cliente."
         data_tests:
           - not_null
 
   - name: stg_endereco
-    description: "Camada de staging para enderecos."
+    description: "Camada de staging para enderecos. Padroniza UF, cidade e tratamento de valores vazios."
     columns:
       - name: endereco_id
+        description: "Identificador unico do endereco."
         data_tests:
           - unique
           - not_null
       - name: cliente_id
+        description: "Identificador do cliente dono do endereco."
         data_tests:
           - unique
           - not_null
@@ -55,76 +65,101 @@ models:
                 to: ref('stg_cliente')
                 field: cliente_id
       - name: uf
+        description: "UF do endereco em formato padronizado."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['SP', 'RJ', 'MG', 'PR', 'RS', 'BA', 'PE', 'SC', 'GO', 'CE']
       - name: cidade
+        description: "Cidade do endereco em minusculas."
         data_tests:
           - not_null
       - name: cep
+        description: "CEP do endereco."
         data_tests:
           - not_null
+      - name: logradouro
+        description: "Logradouro do endereco."
+      - name: bairro
+        description: "Bairro do endereco."
+      - name: numero
+        description: "Numero do endereco."
+      - name: complemento
+        description: "Complemento do endereco, ou null quando vazio."
 
   - name: stg_categoria
-    description: "Camada de staging para categorias."
+    description: "Camada de staging para categorias. Padroniza a sigla e conserva o nome descritivo."
     columns:
       - name: categoria_id
+        description: "Identificador unico da categoria."
         data_tests:
           - unique
           - not_null
       - name: sigla_categoria
+        description: "Sigla padronizada da categoria."
         data_tests:
           - unique
           - not_null
       - name: nome_categoria
+        description: "Nome descritivo da categoria."
         data_tests:
           - unique
           - not_null
 
   - name: stg_produto
-    description: "Camada de staging para produtos."
+    description: "Camada de staging para produtos. Normaliza nome, status, data de cadastro e valores numericos."
     columns:
       - name: produto_id
+        description: "Identificador unico do produto."
         data_tests:
           - unique
           - not_null
       - name: nome_produto
+        description: "Nome do produto com espacos normalizados."
         data_tests:
           - unique
           - not_null
       - name: status_produto
+        description: "Status padronizado do produto."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['ativo', 'inativo']
       - name: quantidade_estoque
+        description: "Quantidade atual em estoque."
         data_tests:
           - not_null
       - name: preco_atual
+        description: "Preco atual convertido para decimal."
         data_tests:
           - not_null
       - name: categoria_id
+        description: "Identificador da categoria do produto."
         data_tests:
           - not_null
           - relationships:
               arguments:
                 to: ref('stg_categoria')
                 field: categoria_id
+      - name: marca
+        description: "Marca do produto."
       - name: dt_cadastro
+        description: "Data de cadastro do produto."
         data_tests:
           - not_null
 
   - name: stg_pedidos
-    description: "Camada de staging para pedidos."
+    description: "Camada de staging para pedidos. Padroniza status, forma de pagamento, canal, geografia e valores monetarios."
     columns:
       - name: pedido_id
+        description: "Identificador unico do pedido."
         data_tests:
           - unique
           - not_null
       - name: cliente_id
+        description: "Identificador do cliente associado ao pedido."
         data_tests:
           - not_null
           - relationships:
@@ -132,43 +167,55 @@ models:
                 to: ref('stg_cliente')
                 field: cliente_id
       - name: dt_pedido
+        description: "Data e hora do pedido convertida para timestamp."
         data_tests:
           - not_null
       - name: status_pedido
+        description: "Status padronizado do pedido."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['cancelado', 'concluido', 'em_separacao', 'em_transporte', 'entregue', 'faturado']
       - name: forma_pagamento
+        description: "Forma de pagamento padronizada."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['boleto', 'cartao_credito', 'cartao_debito', 'pix']
       - name: valor_frete
+        description: "Valor do frete do pedido."
         data_tests:
           - not_null
       - name: valor_desconto_pedido
+        description: "Valor do desconto aplicado ao pedido."
         data_tests:
           - not_null
+      - name: cupom_codigo
+        description: "Codigo do cupom aplicado ao pedido, quando existe."
       - name: canal_venda
+        description: "Canal de venda padronizado."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['site', 'app', 'marketplace']
       - name: uf_entrega
+        description: "UF da entrega padronizada."
         data_tests:
           - not_null
           - accepted_values:
               arguments:
                 values: ['SP', 'RJ', 'MG', 'PR', 'RS', 'BA', 'PE', 'SC', 'GO', 'CE']
+      - name: cidade_entrega
+        description: "Cidade de entrega padronizada em minusculas, com null quando nao informada."
 
   - name: stg_item_pedido
-    description: "Camada de staging para itens de pedido."
+    description: "Camada de staging para itens de pedido. Renomeia colunas, tipa valores e calcula o valor bruto do item."
     columns:
       - name: pedido_id
+        description: "Identificador do pedido."
         data_tests:
           - not_null
           - relationships:
@@ -176,9 +223,11 @@ models:
                 to: ref('stg_pedidos')
                 field: pedido_id
       - name: item_seq
+        description: "Sequencia do item no pedido."
         data_tests:
           - not_null
       - name: produto_id
+        description: "Identificador do produto no item."
         data_tests:
           - not_null
           - relationships:
@@ -186,17 +235,22 @@ models:
                 to: ref('stg_produto')
                 field: produto_id
       - name: quantidade
+        description: "Quantidade vendida no item."
         data_tests:
           - not_null
       - name: preco_unitario
+        description: "Preco unitario bruto do item."
         data_tests:
           - not_null
       - name: valor_desconto_item
+        description: "Valor de desconto aplicado ao item."
         data_tests:
           - not_null
       - name: subtotal_item
+        description: "Valor liquido do item apos desconto."
         data_tests:
           - not_null
       - name: valor_bruto_item
+        description: "Valor bruto calculado do item antes do desconto."
         data_tests:
           - not_null
