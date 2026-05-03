@@ -255,3 +255,506 @@ models:
         description: "Receita liquida considerada para analise; pedidos cancelados sao zerados."
         data_tests:
           - not_null
+
+  - name: agg_vendas_por_estado
+    description: "Agregacao analitica de vendas por UF, com faturamento, volume e ranking de desempenho."
+    columns:
+      - name: uf
+        description: "UF utilizada para a analise de vendas, priorizando a UF de entrega."
+        data_tests:
+          - unique
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['SP', 'RJ', 'MG', 'PR', 'RS', 'BA', 'PE', 'SC', 'GO', 'CE']
+      - name: ranking_faturamento
+        description: "Posicao da UF no ranking de faturamento."
+        data_tests:
+          - not_null
+      - name: ranking_quantidade
+        description: "Posicao da UF no ranking de quantidade vendida."
+        data_tests:
+          - not_null
+      - name: pedidos_totais
+        description: "Quantidade total de pedidos associados a UF, incluindo pedidos cancelados."
+        data_tests:
+          - not_null
+      - name: pedidos_faturados
+        description: "Quantidade de pedidos com receita positiva na UF."
+        data_tests:
+          - not_null
+      - name: clientes_com_compra
+        description: "Quantidade de clientes distintos com compra faturada na UF."
+        data_tests:
+          - not_null
+      - name: quantidade_total_vendida
+        description: "Quantidade total vendida na UF, ja considerando zeragem de pedidos cancelados."
+        data_tests:
+          - not_null
+      - name: faturamento_total
+        description: "Receita liquida total da UF."
+        data_tests:
+          - not_null
+      - name: ticket_medio_pedido
+        description: "Faturamento medio por pedido faturado na UF."
+        data_tests:
+          - not_null
+
+  - name: agg_vendas_por_categoria
+    description: "Agregacao analitica de vendas por categoria, com rankings por quantidade e faturamento."
+    columns:
+      - name: categoria_id
+        description: "Identificador da categoria agregada."
+        data_tests:
+          - unique
+          - not_null
+      - name: sigla_categoria
+        description: "Sigla da categoria."
+        data_tests:
+          - not_null
+      - name: nome_categoria
+        description: "Nome da categoria."
+        data_tests:
+          - not_null
+      - name: ranking_quantidade
+        description: "Posicao da categoria no ranking por quantidade vendida."
+        data_tests:
+          - not_null
+      - name: ranking_faturamento
+        description: "Posicao da categoria no ranking por faturamento."
+        data_tests:
+          - not_null
+      - name: pedidos_com_categoria
+        description: "Quantidade de pedidos com pelo menos um item da categoria."
+        data_tests:
+          - not_null
+      - name: quantidade_total_vendida
+        description: "Quantidade total vendida da categoria."
+        data_tests:
+          - not_null
+      - name: faturamento_total
+        description: "Receita liquida total da categoria."
+        data_tests:
+          - not_null
+      - name: ticket_medio_pedido
+        description: "Receita media por pedido com a categoria."
+        data_tests:
+          - not_null
+
+  - name: agg_vendas_mensal
+    description: "Agregacao mensal de vendas faturadas, com receita, volume, quantidade de pedidos e ranking de meses."
+    columns:
+      - name: mes_pedido
+        description: "Primeiro dia do mes de referencia."
+        data_tests:
+          - unique
+          - not_null
+      - name: ano_pedido
+        description: "Ano da competencia mensal."
+        data_tests:
+          - not_null
+      - name: mes_numero_pedido
+        description: "Numero do mes da competencia."
+        data_tests:
+          - not_null
+      - name: ranking_receita
+        description: "Posicao do mes no ranking de receita."
+        data_tests:
+          - not_null
+      - name: pedidos_faturados
+        description: "Quantidade de pedidos faturados no mes."
+        data_tests:
+          - not_null
+      - name: clientes_com_compra
+        description: "Quantidade de clientes distintos com compra no mes."
+        data_tests:
+          - not_null
+      - name: quantidade_total_vendida
+        description: "Quantidade total vendida no mes."
+        data_tests:
+          - not_null
+      - name: receita_total
+        description: "Receita liquida total do mes."
+        data_tests:
+          - not_null
+      - name: ticket_medio_mensal
+        description: "Ticket medio dos pedidos faturados no mes."
+        data_tests:
+          - not_null
+
+  - name: agg_clientes_por_segmento
+    description: "Agregacao de clientes por segmento, combinando base cadastral, fidelidade e comportamento de compra."
+    columns:
+      - name: segmento
+        description: "Segmento analitico do cliente, incluindo nao_informado quando o cadastro nao traz segmento."
+        data_tests:
+          - unique
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['pf', 'b2b', 'nao_informado']
+      - name: ranking_receita
+        description: "Posicao do segmento no ranking de receita."
+        data_tests:
+          - not_null
+      - name: total_clientes
+        description: "Quantidade total de clientes do segmento."
+        data_tests:
+          - not_null
+      - name: clientes_ativos
+        description: "Quantidade de clientes ativos no segmento."
+        data_tests:
+          - not_null
+      - name: clientes_inativos
+        description: "Quantidade de clientes inativos no segmento."
+        data_tests:
+          - not_null
+      - name: clientes_com_compra
+        description: "Quantidade de clientes do segmento com pelo menos um pedido faturado."
+        data_tests:
+          - not_null
+      - name: clientes_sem_compra
+        description: "Quantidade de clientes do segmento sem pedidos faturados."
+        data_tests:
+          - not_null
+      - name: clientes_score_alta
+        description: "Quantidade de clientes com faixa de score alta."
+        data_tests:
+          - not_null
+      - name: clientes_score_media
+        description: "Quantidade de clientes com faixa de score media."
+        data_tests:
+          - not_null
+      - name: clientes_score_baixa
+        description: "Quantidade de clientes com faixa de score baixa."
+        data_tests:
+          - not_null
+      - name: pedidos_faturados
+        description: "Quantidade total de pedidos faturados do segmento."
+        data_tests:
+          - not_null
+      - name: quantidade_total_vendida
+        description: "Quantidade total vendida para o segmento."
+        data_tests:
+          - not_null
+      - name: receita_total
+        description: "Receita liquida total do segmento."
+        data_tests:
+          - not_null
+      - name: score_medio_fidelidade
+        description: "Score medio de fidelidade dos clientes do segmento."
+        data_tests:
+          - not_null
+      - name: ticket_medio_pedido
+        description: "Receita media por pedido faturado do segmento."
+      - name: receita_media_por_cliente_com_compra
+        description: "Receita media por cliente comprador do segmento."
+
+  - name: agg_vendas_por_produto
+    description: "Agregacao analitica de vendas por produto, com rankings por quantidade e faturamento."
+    columns:
+      - name: produto_id
+        description: "Identificador unico do produto agregado."
+        data_tests:
+          - unique
+          - not_null
+      - name: ranking_quantidade
+        description: "Posicao do produto no ranking de quantidade vendida."
+        data_tests:
+          - not_null
+      - name: ranking_faturamento
+        description: "Posicao do produto no ranking de faturamento."
+        data_tests:
+          - not_null
+      - name: nome_produto
+        description: "Nome do produto."
+        data_tests:
+          - not_null
+      - name: nome_categoria
+        description: "Categoria do produto."
+        data_tests:
+          - not_null
+      - name: marca
+        description: "Marca do produto."
+      - name: faixa_preco
+        description: "Faixa de preco do produto."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['ate_99', '100_a_299', '300_a_599', '600_ou_mais']
+      - name: status_produto
+        description: "Status atual do produto."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['ativo', 'inativo']
+      - name: pedidos_com_produto
+        description: "Quantidade de pedidos com o produto."
+        data_tests:
+          - not_null
+      - name: clientes_com_compra
+        description: "Quantidade de clientes distintos que compraram o produto."
+        data_tests:
+          - not_null
+      - name: quantidade_total_vendida
+        description: "Quantidade total vendida do produto."
+        data_tests:
+          - not_null
+      - name: faturamento_total
+        description: "Receita liquida total do produto."
+        data_tests:
+          - not_null
+      - name: ticket_medio_pedido
+        description: "Receita media por pedido com o produto."
+        data_tests:
+          - not_null
+
+  - name: agg_vendas_por_canal
+    description: "Agregacao de desempenho por canal de venda, com receita, volume e taxa de cancelamento."
+    columns:
+      - name: canal_venda
+        description: "Canal de venda agregado."
+        data_tests:
+          - unique
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['site', 'app', 'marketplace']
+      - name: ranking_faturamento
+        description: "Posicao do canal no ranking de faturamento."
+        data_tests:
+          - not_null
+      - name: ranking_quantidade
+        description: "Posicao do canal no ranking de quantidade vendida."
+        data_tests:
+          - not_null
+      - name: pedidos_totais
+        description: "Quantidade total de pedidos no canal."
+        data_tests:
+          - not_null
+      - name: pedidos_faturados
+        description: "Quantidade de pedidos faturados no canal."
+        data_tests:
+          - not_null
+      - name: pedidos_cancelados
+        description: "Quantidade de pedidos cancelados no canal."
+        data_tests:
+          - not_null
+      - name: clientes_com_compra
+        description: "Quantidade de clientes distintos com compra faturada no canal."
+        data_tests:
+          - not_null
+      - name: quantidade_total_vendida
+        description: "Quantidade total vendida no canal."
+        data_tests:
+          - not_null
+      - name: faturamento_total
+        description: "Receita liquida total do canal."
+        data_tests:
+          - not_null
+      - name: ticket_medio_pedido
+        description: "Receita media por pedido faturado no canal."
+        data_tests:
+          - not_null
+      - name: percentual_cancelamento
+        description: "Proporcao de pedidos cancelados dentro do canal."
+        data_tests:
+          - not_null
+
+  - name: agg_vendas_por_forma_pagamento
+    description: "Agregacao de desempenho por forma de pagamento, com receita, volume e taxa de cancelamento."
+    columns:
+      - name: forma_pagamento
+        description: "Forma de pagamento agregada."
+        data_tests:
+          - unique
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['boleto', 'cartao_credito', 'cartao_debito', 'pix']
+      - name: ranking_faturamento
+        description: "Posicao da forma de pagamento no ranking de faturamento."
+        data_tests:
+          - not_null
+      - name: ranking_quantidade
+        description: "Posicao da forma de pagamento no ranking de quantidade vendida."
+        data_tests:
+          - not_null
+      - name: pedidos_totais
+        description: "Quantidade total de pedidos nessa forma de pagamento."
+        data_tests:
+          - not_null
+      - name: pedidos_faturados
+        description: "Quantidade de pedidos faturados nessa forma de pagamento."
+        data_tests:
+          - not_null
+      - name: pedidos_cancelados
+        description: "Quantidade de pedidos cancelados nessa forma de pagamento."
+        data_tests:
+          - not_null
+      - name: clientes_com_compra
+        description: "Quantidade de clientes distintos com compra faturada nessa forma de pagamento."
+        data_tests:
+          - not_null
+      - name: quantidade_total_vendida
+        description: "Quantidade total vendida nessa forma de pagamento."
+        data_tests:
+          - not_null
+      - name: faturamento_total
+        description: "Receita liquida total dessa forma de pagamento."
+        data_tests:
+          - not_null
+      - name: ticket_medio_pedido
+        description: "Receita media por pedido faturado nessa forma de pagamento."
+        data_tests:
+          - not_null
+      - name: percentual_cancelamento
+        description: "Proporcao de cancelamento por forma de pagamento."
+        data_tests:
+          - not_null
+
+  - name: agg_pedidos_por_status
+    description: "Agregacao de pedidos por status, com distribuicao, receita e ranking."
+    columns:
+      - name: status_pedido
+        description: "Status agregado do pedido."
+        data_tests:
+          - unique
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['cancelado', 'concluido', 'em_separacao', 'em_transporte', 'entregue', 'faturado']
+      - name: ranking_quantidade_pedidos
+        description: "Posicao do status no ranking por quantidade de pedidos."
+        data_tests:
+          - not_null
+      - name: ranking_receita
+        description: "Posicao do status no ranking por receita."
+        data_tests:
+          - not_null
+      - name: quantidade_pedidos
+        description: "Quantidade de pedidos no status."
+        data_tests:
+          - not_null
+      - name: clientes_distintos
+        description: "Quantidade de clientes distintos associados ao status."
+        data_tests:
+          - not_null
+      - name: quantidade_total_vendida
+        description: "Quantidade total vendida associada ao status."
+        data_tests:
+          - not_null
+      - name: receita_total
+        description: "Receita liquida total associada ao status."
+        data_tests:
+          - not_null
+      - name: ticket_medio_pedido
+        description: "Receita media por pedido no status."
+        data_tests:
+          - not_null
+      - name: percentual_pedidos
+        description: "Participacao do status sobre o total de pedidos."
+        data_tests:
+          - not_null
+
+  - name: agg_clientes_por_uf
+    description: "Agregacao de clientes por UF de cadastro, combinando base cadastral e comportamento de compra."
+    columns:
+      - name: uf_cadastro
+        description: "UF de cadastro agregada."
+        data_tests:
+          - unique
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['SP', 'RJ', 'MG', 'PR', 'RS', 'BA', 'PE', 'SC', 'GO', 'CE']
+      - name: ranking_receita
+        description: "Posicao da UF no ranking de receita."
+        data_tests:
+          - not_null
+      - name: total_clientes
+        description: "Quantidade total de clientes da UF."
+        data_tests:
+          - not_null
+      - name: clientes_ativos
+        description: "Quantidade de clientes ativos da UF."
+        data_tests:
+          - not_null
+      - name: clientes_inativos
+        description: "Quantidade de clientes inativos da UF."
+        data_tests:
+          - not_null
+      - name: clientes_com_compra
+        description: "Quantidade de clientes da UF com pelo menos um pedido faturado."
+        data_tests:
+          - not_null
+      - name: clientes_sem_compra
+        description: "Quantidade de clientes da UF sem pedidos faturados."
+        data_tests:
+          - not_null
+      - name: pedidos_faturados
+        description: "Quantidade total de pedidos faturados da UF."
+        data_tests:
+          - not_null
+      - name: quantidade_total_vendida
+        description: "Quantidade total vendida para clientes da UF."
+        data_tests:
+          - not_null
+      - name: receita_total
+        description: "Receita liquida total da UF."
+        data_tests:
+          - not_null
+      - name: score_medio_fidelidade
+        description: "Score medio de fidelidade dos clientes da UF."
+        data_tests:
+          - not_null
+      - name: ticket_medio_pedido
+        description: "Receita media por pedido faturado na UF."
+      - name: receita_media_por_cliente_com_compra
+        description: "Receita media por cliente comprador da UF."
+
+  - name: agg_vendas_por_faixa_preco
+    description: "Agregacao de vendas por faixa de preco dos produtos."
+    columns:
+      - name: faixa_preco
+        description: "Faixa de preco agregada."
+        data_tests:
+          - unique
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['ate_99', '100_a_299', '300_a_599', '600_ou_mais']
+      - name: ranking_quantidade
+        description: "Posicao da faixa de preco no ranking de quantidade vendida."
+        data_tests:
+          - not_null
+      - name: ranking_faturamento
+        description: "Posicao da faixa de preco no ranking de faturamento."
+        data_tests:
+          - not_null
+      - name: produtos_distintos
+        description: "Quantidade de produtos distintos vendidos na faixa."
+        data_tests:
+          - not_null
+      - name: pedidos_com_venda
+        description: "Quantidade de pedidos com venda na faixa."
+        data_tests:
+          - not_null
+      - name: clientes_com_compra
+        description: "Quantidade de clientes distintos com compra na faixa."
+        data_tests:
+          - not_null
+      - name: quantidade_total_vendida
+        description: "Quantidade total vendida da faixa."
+        data_tests:
+          - not_null
+      - name: faturamento_total
+        description: "Receita liquida total da faixa."
+        data_tests:
+          - not_null
+      - name: ticket_medio_pedido
+        description: "Receita media por pedido com itens da faixa."
+        data_tests:
+          - not_null

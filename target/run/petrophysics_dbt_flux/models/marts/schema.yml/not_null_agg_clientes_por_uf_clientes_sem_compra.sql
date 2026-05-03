@@ -1,0 +1,25 @@
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select clientes_sem_compra
+from "dev"."main"."agg_clientes_por_uf"
+where clientes_sem_compra is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test

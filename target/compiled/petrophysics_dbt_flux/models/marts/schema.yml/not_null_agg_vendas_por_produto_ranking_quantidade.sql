@@ -1,0 +1,11 @@
+
+    
+    
+
+
+
+select ranking_quantidade
+from "dev"."main"."agg_vendas_por_produto"
+where ranking_quantidade is null
+
+

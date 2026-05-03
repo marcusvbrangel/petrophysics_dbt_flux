@@ -1,0 +1,14 @@
+
+    
+    
+
+select
+    mes_pedido as unique_field,
+    count(*) as n_records
+
+from "dev"."main"."agg_vendas_mensal"
+where mes_pedido is not null
+group by mes_pedido
+having count(*) > 1
+
+
