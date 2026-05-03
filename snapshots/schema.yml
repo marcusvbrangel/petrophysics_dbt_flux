@@ -1,0 +1,76 @@
+version: 2
+
+snapshots:
+  - name: snap_clientes
+    description: "Snapshot historico de clientes baseado na camada stg_cliente. Registra mudancas cadastrais e comerciais ao longo do tempo."
+    columns:
+      - name: cliente_id
+        description: "Identificador do cliente versionado no snapshot."
+        data_tests:
+          - not_null
+      - name: nome_cliente
+        description: "Nome do cliente na versao historica."
+      - name: email
+        description: "E-mail do cliente na versao historica."
+      - name: dt_cadastro
+        description: "Data de cadastro observada naquela versao do cliente."
+      - name: status_cliente
+        description: "Status do cliente na versao historica."
+      - name: segmento
+        description: "Segmento do cliente na versao historica."
+      - name: canal_preferido
+        description: "Canal preferido na versao historica."
+      - name: score_fidelidade
+        description: "Score de fidelidade observado na versao historica."
+      - name: dbt_scd_id
+        description: "Chave tecnica da versao gerada pelo dbt snapshot."
+        data_tests:
+          - unique
+          - not_null
+      - name: dbt_updated_at
+        description: "Momento usado pelo dbt para registrar a mudanca da versao."
+        data_tests:
+          - not_null
+      - name: dbt_valid_from
+        description: "Inicio de vigencia da versao historica."
+        data_tests:
+          - not_null
+      - name: dbt_valid_to
+        description: "Fim de vigencia da versao historica. Fica nulo para a versao atual."
+
+  - name: snap_produtos
+    description: "Snapshot historico de produtos baseado na camada stg_produto. Registra mudancas de preco, estoque, categoria e status."
+    columns:
+      - name: produto_id
+        description: "Identificador do produto versionado no snapshot."
+        data_tests:
+          - not_null
+      - name: nome_produto
+        description: "Nome do produto na versao historica."
+      - name: status_produto
+        description: "Status do produto na versao historica."
+      - name: quantidade_estoque
+        description: "Estoque observado na versao historica."
+      - name: preco_atual
+        description: "Preco observado na versao historica."
+      - name: categoria_id
+        description: "Categoria observada na versao historica."
+      - name: marca
+        description: "Marca do produto na versao historica."
+      - name: dt_cadastro
+        description: "Data de cadastro observada na versao historica."
+      - name: dbt_scd_id
+        description: "Chave tecnica da versao gerada pelo dbt snapshot."
+        data_tests:
+          - unique
+          - not_null
+      - name: dbt_updated_at
+        description: "Momento usado pelo dbt para registrar a mudanca da versao."
+        data_tests:
+          - not_null
+      - name: dbt_valid_from
+        description: "Inicio de vigencia da versao historica."
+        data_tests:
+          - not_null
+      - name: dbt_valid_to
+        description: "Fim de vigencia da versao historica. Fica nulo para a versao atual."
